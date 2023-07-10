@@ -1,0 +1,200 @@
+[29-Nov-2022 01:25:33 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Blog.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Blog.php on line 8
+[29-Nov-2022 01:25:36 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Complaint_Follow_Up.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Complaint_Follow_Up.php on line 8
+[29-Nov-2022 01:25:41 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Customer.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Customer.php on line 8
+[29-Nov-2022 01:25:43 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Customer_Logs.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Customer_Logs.php on line 8
+[29-Nov-2022 01:25:46 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Products.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Products.php on line 8
+[29-Nov-2022 01:25:49 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home/sodabaz/public_html/MasterMotor/app/Models/User.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/User.php on line 11
+[29-Nov-2022 01:25:52 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Vehicles.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Vehicles.php on line 8
+[29-Nov-2022 01:25:55 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_complain.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_complain.php on line 8
+[29-Nov-2022 01:25:58 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_inquiry.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_inquiry.php on line 8
+[29-Nov-2022 01:26:03 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_users.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_users.php on line 8
+[04-Dec-2022 14:41:21 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Blog.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Blog.php on line 8
+[04-Dec-2022 14:41:56 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Complaint_Follow_Up.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Complaint_Follow_Up.php on line 8
+[04-Dec-2022 14:41:59 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Customer.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Customer.php on line 8
+[04-Dec-2022 14:42:04 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Customer_Logs.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Customer_Logs.php on line 8
+[04-Dec-2022 14:42:08 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Products.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Products.php on line 8
+[04-Dec-2022 14:42:13 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home/sodabaz/public_html/MasterMotor/app/Models/User.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/User.php on line 11
+[04-Dec-2022 14:42:17 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Vehicles.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Vehicles.php on line 8
+[04-Dec-2022 14:42:27 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_complain.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_complain.php on line 8
+[04-Dec-2022 14:42:32 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_inquiry.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_inquiry.php on line 8
+[04-Dec-2022 14:42:38 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_users.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_users.php on line 8
+[06-Dec-2022 18:35:13 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Blog.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Blog.php on line 8
+[06-Dec-2022 18:35:17 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Complaint_Follow_Up.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Complaint_Follow_Up.php on line 8
+[06-Dec-2022 18:35:22 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Customer.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Customer.php on line 8
+[06-Dec-2022 18:35:26 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Customer_Logs.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Customer_Logs.php on line 8
+[06-Dec-2022 18:35:31 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Products.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Products.php on line 8
+[06-Dec-2022 18:35:36 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home/sodabaz/public_html/MasterMotor/app/Models/User.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/User.php on line 11
+[06-Dec-2022 18:35:40 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Vehicles.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Vehicles.php on line 8
+[06-Dec-2022 18:35:45 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_complain.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_complain.php on line 8
+[06-Dec-2022 18:35:49 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_inquiry.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_inquiry.php on line 8
+[06-Dec-2022 18:35:54 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_users.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_users.php on line 8
+[08-Dec-2022 22:21:38 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Blog.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Blog.php on line 8
+[08-Dec-2022 22:21:41 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Complaint_Follow_Up.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Complaint_Follow_Up.php on line 8
+[08-Dec-2022 22:21:43 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Customer.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Customer.php on line 8
+[08-Dec-2022 22:21:46 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Customer_Logs.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Customer_Logs.php on line 8
+[08-Dec-2022 22:21:48 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Products.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Products.php on line 8
+[08-Dec-2022 22:21:51 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home/sodabaz/public_html/MasterMotor/app/Models/User.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/User.php on line 11
+[08-Dec-2022 22:21:53 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Vehicles.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Vehicles.php on line 8
+[08-Dec-2022 22:21:58 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_complain.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_complain.php on line 8
+[08-Dec-2022 22:22:02 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_inquiry.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_inquiry.php on line 8
+[08-Dec-2022 22:22:04 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_users.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_users.php on line 8
+[18-Dec-2022 23:26:54 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Blog.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Blog.php on line 8
+[18-Dec-2022 23:27:00 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Complaint_Follow_Up.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Complaint_Follow_Up.php on line 8
+[18-Dec-2022 23:27:07 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Customer.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Customer.php on line 8
+[18-Dec-2022 23:27:13 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Customer_Logs.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Customer_Logs.php on line 8
+[18-Dec-2022 23:27:20 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Products.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Products.php on line 8
+[18-Dec-2022 23:27:25 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home/sodabaz/public_html/MasterMotor/app/Models/User.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/User.php on line 11
+[18-Dec-2022 23:27:32 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/Vehicles.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/Vehicles.php on line 8
+[18-Dec-2022 23:27:46 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_complain.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_complain.php on line 8
+[18-Dec-2022 23:27:53 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_inquiry.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_customers_inquiry.php on line 8
+[18-Dec-2022 23:28:00 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_users.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Models/tbl_users.php on line 8

@@ -1,0 +1,20 @@
+[29-Nov-2022 01:36:26 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/sodabaz/public_html/MasterMotor/tests/Feature/ExampleTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/tests/Feature/ExampleTest.php on line 8
+[04-Dec-2022 14:54:02 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/sodabaz/public_html/MasterMotor/tests/Feature/ExampleTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/tests/Feature/ExampleTest.php on line 8
+[06-Dec-2022 18:54:55 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/sodabaz/public_html/MasterMotor/tests/Feature/ExampleTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/tests/Feature/ExampleTest.php on line 8
+[08-Dec-2022 22:27:36 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/sodabaz/public_html/MasterMotor/tests/Feature/ExampleTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/tests/Feature/ExampleTest.php on line 8
+[18-Dec-2022 23:42:20 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/sodabaz/public_html/MasterMotor/tests/Feature/ExampleTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/tests/Feature/ExampleTest.php on line 8

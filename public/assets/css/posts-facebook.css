@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../../../public/Fonts/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: BeVietnamPro-Regular;
+    src: url('../../../public/Fonts/BeVietnamPro-Regular.ttf');
+}
+
+
+
+.mainContainerFbPosts {
+       width: 100%;
+    /*height: 700px;*/
+    /*background-color: red;*/
+    padding: 20px 10% 20px 10%;
+}
+
+.subContainerFbPosts {
+    width: 100%;
+    height: 500px;
+    background-color: #EFF2F1;
+    display: flex;
+    /* justify-content: center; */
+     border-radius: 10px; 
+    padding: 10px;
+}
+
+.leftContainer {
+    width: 30%;
+    /* background-color: #373A3B; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.notificationsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.notificationsDiv:hover {
+    background-color: #E4E6E7;
+    cursor: pointer;
+}
+
+.links {
+    text-decoration: none;
+    color: #222526;
+    font-family: BeVietnamPro-Regular;
+    /* margin-top: 4px; */
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+/* .links:hover {
+    background-color: #E4E6E7;
+} */
+
+.notificationNumber {
+    color: white;
+    font-family: BeVietnamPro-Regular;
+    font-size: 17px;
+    margin-top: 4px;
+    margin-right: 15px;
+    background-color: red;
+    border-radius: 50px;
+    /* padding: 2px; */
+    width: 27px;
+    height: 25px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.postSectionFbPosts {
+    width: 100%;
+    /* height: 65vh; */
+    background-color: #fff;
+    margin-top: 5px;
+    border-radius: 9px;
+    border: 1px solid #E2E4E5;
+    overflow-y: scroll !important;
+}
+
+.postSectionFbPosts::-webkit-scrollbar {
+    display: none;
+}
+
+.headerPost {
+    display: flex;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.userImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.dateText {
+    font-family: BeVietnamPro-Regular;
+    font-size: 13px;
+    color: #c4c4c2;
+    font-weight: 500;
+}
+
+.nameText {
+    font-family: BeVietnamPro-Regular;
+    font-size: 13px;
+    color: #222526;
+    font-weight: 600;
+}
+
+.postImg {
+    width: 100%;
+    height: 280px;
+    background-size: cover;
+}
+
+.bottomPost {
+    display: flex;
+    border-bottom: 1px #373A3B solid;
+    justify-content: space-between;
+    margin: 1px 25px;
+    padding: 5px;
+}
+
+.likesText {
+    color: #646669;
+    font-family: BeVietnamPro-Regular;
+    font-size: 15px;
+}
+
+.likesText:hover {
+    text-decoration: underline;
+}
+
+.commentsText {
+    color: #646669;
+    font-family: BeVietnamPro-Regular;
+    font-size: 15px;
+}
+
+.commentsText:hover {
+    text-decoration: underline;
+}
+
+.bottomSection {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 25px;
+}
+
+.buttonLike {
+    width: 250px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.buttonLike:hover {
+    background-color: #F2F2EF;
+}
+
+.buttonComment {
+    width: 250px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.buttonComment:hover {
+    background-color: #F2F2EF;
+}
+
+.linksDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.linksDiv:hover {
+    background-color: #E4E6E7;
+}
+
+.linksDivIcon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* margin-top: 10px; */
+    cursor: pointer;
+}
+
+.linksDivIcon:hover {
+    background-color: #E4E6E7;
+}
+
+
+
+.likeImg {
+    width: 20px;
+}
+
+
+.linksImgMessages {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+
+.linksImg {
+    width: 20px;
+    height: 20px;
+    /* border-radius: 50px; */
+    margin-left: 10px;
+}
+
+.likePostText {
+    margin-left: 10px !important;
+    color: #686A6D;
+    font-family: BeVietnamPro-Regular;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.commentPostText {
+    margin-left: 10px !important;
+    color: #686A6D;
+    font-family: BeVietnamPro-Regular;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.postImg {
+    width: 100.1%;
+    background-color: #005353;
+}
+
+#para {
+    width: 95%;
+    height: 200px;
+    /* background-color: #373A3B; */
+    /*display: none;*/
+    margin: 1px 20px 1px 20px;
+}
+
+.yourCommentDiv {
+    width: 100%;
+    /* background-color: #005353; */
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding: 10px;
+}
+
+.yourCommentImg {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.commentInput {
+    width: 93%;
+    border-radius: 50px;
+    background-color: #F0F2F3;
+    padding: 5px;
+    border: none;
+    margin-left: 15px;
+    padding-left: 10px !important;
+}
+
+.commentInput::placeholder {
+    color: #6D6F72;
+    font-family: BeVietnamPro-Regular;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.commentInput:active {
+    border: none;
+}
+
+
+.recentComments {
+    display: flex;
+    padding: 12px;
+    /* width: 100%; */
+    /* flex-direction: column; */
+}
+
+.recentCommentsResponseBoxMain {
+    margin-left: 10px;
+    /* width: 80%; */
+    /* background-color: #111111; */
+}
+
+.recentCommentsResponseBox {
+    /* margin-left: 10px; */
+    background-color: #F0F2F3;
+    border-radius: 18px;
+    padding: 5px 10px 5px 10px;
+}
+
+.nameOfRecentCommentsUser {
+    color: #111111;
+    font-family: BeVietnamPro-Regular;
+    font-size: 16px;
+    font-weight: 500;
+    /* padding-left: 10px; */
+}
+
+.nameOfRecentCommentsUser:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.commentOfRecentCommentsUser {
+    color: #303131;
+    font-family: BeVietnamPro-Regular;
+    font-size: 15px;
+    font-weight: 500;
+    /* padding-left: 10px; */
+}
+
+.recentCommentsLike {
+    color: #303131;
+    font-family: BeVietnamPro-Regular;
+    font-size: 12px;
+    font-weight: 600;
+    /* margin-left: 10px; */
+}
+
+.recentCommentsReply {
+    color: #303131;
+    font-family: BeVietnamPro-Regular;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.recentCommentsReply:hover {
+    text-decoration: underline;
+}
+
+#inputReplyDiv {
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    /* background-color: red; */
+    /* justify-content: center; */
+}
+#inputReplyDiv2nd {
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.inputReply {
+    width: 50%;
+    border-radius: 50px;
+    background-color: #F0F2F3;
+    padding: 5px;
+    border: none;
+    align-self: center;
+    margin-left: 54px;
+    /* margin-left: 15px; */
+    padding-left: 10px !important;
+    margin-bottom: 10px;
+}
+.inputReply::placeholder {
+    color: #6D6F72;
+    font-family: BeVietnamPro-Regular;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 2px;
+}
+
+.inputReply:active {
+    border: none;
+}
+
+
+.recentCommentsReplyTime {
+    color: #303131;
+    font-family: BeVietnamPro-Regular;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 15px !important;
+}
+
+.recentCommentsSub {
+    display: none;
+    padding: 12px;
+    margin-left: 45px;
+   
+}
+.checkSubReplies {
+    color: #696B6E;
+    font-family: BeVietnamPro-Regular;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 15px !important;
+    margin-top: 5px !important;
+    cursor: pointer;
+}
+
+.checkSubReplies:hover {
+    text-decoration: underline;
+}
+
+.subreplyNumbers {
+    display: flex;
+}
+
+.arrowImg {
+    width: 20px;
+    height: 20px;
+    margin-top: 8px;
+}
+
+#showSideBar {
+    width: 28%;
+    background-color: #fff;
+    height: 100%;
+    display: none;
+    margin-right: 10px;
+    margin-top: 16px;
+    padding: 5px 13px 13px 13px;
+    /* border: 1px solid black; */
+}
+
+#leftContainerId {
+    display: flex;
+}
+
+.crossImg {
+    float: right;
+    width: 20px;
+    cursor: pointer;
+}
+
+.upper-container {
+    width: 100%;
+    /* background-color: #128373; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.profImgInfo {
+    width: 100px;
+    border-radius: 50px;
+}
+
+.NameTextInfo {
+    margin: 0;
+    font-size: 16px;
+    font-family: BeVietnamPro-Regular;
+    color: #393A4A;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.CityTextInfo {
+    margin: 0;
+    font-size: 14px;
+    font-family: BeVietnamPro-Regular;
+    color: #393A4A;
+}
+
+.inquiryBox {
+    width: 95%;
+    /* height: 90px; */
+    border: 1px solid #DDDDDC;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.newTicketButtonFb  {
+    cursor: pointer;
+    border: none;
+    background-color: #0000a5;
+    margin: 5px;
+    font-family: BeVietnamPro-Regular !important;
+    font-size: 13px;
+    padding: 7px 23px 7px 23px !important;
+    border-radius: 50px;
+    color: #ffffff;
+    /*width: 102px;*/
+    align-self: flex-end;
+    text-decoration: none;
+}
+
+.newTicketButtonFb:hover {
+      color: #ffffff;
+}

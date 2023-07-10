@@ -1,0 +1,18 @@
+<svg id="Group_9" data-name="Group 9" xmlns="http://www.w3.org/2000/svg" width="50.998" height="50.998" viewBox="0 0 50.998 50.998">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #f58935;
+      }
+    </style>
+  </defs>
+  <path id="Frames-24px" class="cls-1" d="M0,0H51V51H0Z"/>
+  <g id="Solid" transform="translate(10.623 2.125)">
+    <path id="Path_21" data-name="Path 21" class="cls-2" d="M10.778,26.5H15.16L9.848,5.25h6.082L17.75,18H22L23.821,5.25H29.9L24.59,26.5h4.382L34.686,3.641A2.125,2.125,0,0,0,32.625,1H7.126A2.121,2.121,0,0,0,5.064,3.641Z" transform="translate(-4.999 -1)"/>
+    <path id="Path_22" data-name="Path 22" class="cls-2" d="M18.75,11l3.642,9.107H31.5L23.62,26.758,27.855,36.5,18.75,30.475,9.642,36.5l4.237-9.741L6,20.107h9.105Z" transform="translate(-3.874 10.249)"/>
+  </g>
+</svg>

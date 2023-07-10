@@ -1,0 +1,263 @@
+.progress1 {
+  position: relative;
+  display: flex;
+}
+
+.progress1 .progress-track {
+  position: absolute;
+  top: 5px;
+  width: 100%;
+  height: 5px;
+  background-color: #dfe3e4;
+}
+
+.progress1 .progress-step {
+  position: relative;
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+}
+
+.progress1 .progress-step:last-child:after {
+  display: none;
+}
+
+.progress1 .progress-step:before {
+  content: "\f00c";
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: 4px solid #dfe3e4;
+  border-radius: 100%;
+  color: transparent;
+}
+
+.progress1 .progress-step:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 0%;
+  transition: width 1s ease-in;
+  height: 5px;
+  background: #dfe3e4;
+}
+
+.progress1 .progress-step.is-active {
+  color: #1b56a2;
+}
+
+.progress1 .progress-step.is-active:before {
+  border: 4px solid #777;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+}
+
+.progress1 .progress-step.is-complete {
+  color: #0C448C;
+}
+
+.progress1 .progress-step.is-complete:before {
+  position: relative;
+  z-index: 999;
+  font-family: FontAwesome;
+  font-size: 9px;
+  color: #fff;
+  text-align: center;
+  background: #0C448C;
+  border: 4px solid transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress1 .progress-step.is-complete:after {
+  background: #0C448C;
+  -webkit-animation: nextStep 1s;
+  animation: nextStep 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(33, 131, 221, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(33, 131, 221, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 131, 221, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(33, 131, 221, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(33, 131, 221, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 131, 221, 0);
+  }
+}
+
+@-webkit-keyframes nextStep {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes nextStep {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+
+.main_head {
+  width: 100vw;
+  height: 8vh;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.end_footer div {
+  width: 100%;
+  height: 8vh;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.end_footer div h6 {
+  margin-left: 20px;
+
+}
+
+.main_body {
+  height: 76vh;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.main_inner_head {
+  margin-top: 10px;
+  /* padding-top: 10px; */
+  /* padding-bottom: 1/0px; */
+}
+
+.main_inner_body {
+  width: auto;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_body_footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-left: 50px; */
+  /* margin-right: 50px; */
+}
+
+.main_body_footer .Previous {
+  width: 120px;
+  height: 40px;
+  background-color: #0C448C;
+  border-radius: 10px;
+  color: white;
+  border: 0;
+  font-size: 16px;
+}
+
+.main_body_footer .next {
+  width: 120px;
+  height: 40px;
+  background-color: #0C448C;
+  border-radius: 10px;
+  color: white;
+  border: 0;
+  font-size: 16px;
+}
+
+
+
+.step1 {
+  display: block;
+}
+
+.step2 {
+  display: none;
+}
+
+.step3 {
+  display: none;
+}
+
+.step4 {
+  display: none;
+}
+
+.step5 {
+  display: none;
+}
+
+.step6 {
+  display: none;
+}
+
+.step7 {
+  display: none;
+}
+
+.step8 {
+  display: none;
+}

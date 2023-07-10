@@ -1,0 +1,364 @@
+[27-Nov-2022 19:53:21 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/app.php on line 18
+[27-Nov-2022 19:53:26 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php on line 18
+[27-Nov-2022 19:53:28 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/cache.php on line 18
+[27-Nov-2022 19:53:35 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/database.php on line 18
+[27-Nov-2022 19:53:38 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/filesystems.php on line 16
+[27-Nov-2022 19:53:40 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/hashing.php on line 32
+[27-Nov-2022 19:53:43 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/logging.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/logging.php on line 20
+[27-Nov-2022 19:53:51 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/mail.php on line 16
+[27-Nov-2022 19:53:56 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/queue.php on line 16
+[27-Nov-2022 19:54:00 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/sanctum.php on line 18
+[27-Nov-2022 19:54:03 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/services.php on line 18
+[27-Nov-2022 19:54:06 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/session.php on line 21
+[27-Nov-2022 19:54:14 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/sodabaz/public_html/MasterMotor/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/view.php on line 17
+[29-Nov-2022 01:27:40 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/app.php on line 18
+[29-Nov-2022 01:27:43 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php on line 18
+[29-Nov-2022 01:27:47 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/cache.php on line 18
+[29-Nov-2022 01:27:51 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/database.php on line 18
+[29-Nov-2022 01:27:55 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/filesystems.php on line 16
+[29-Nov-2022 01:27:58 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/hashing.php on line 32
+[29-Nov-2022 01:28:06 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/logging.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/logging.php on line 20
+[29-Nov-2022 01:28:10 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/mail.php on line 16
+[29-Nov-2022 01:28:13 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/queue.php on line 16
+[29-Nov-2022 01:28:16 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/sanctum.php on line 18
+[29-Nov-2022 01:28:19 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/services.php on line 18
+[29-Nov-2022 01:28:23 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/session.php on line 21
+[29-Nov-2022 01:28:25 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/sodabaz/public_html/MasterMotor/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/view.php on line 17
+[02-Dec-2022 12:37:27 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/app.php on line 18
+[02-Dec-2022 12:37:35 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php on line 18
+[02-Dec-2022 12:37:39 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/cache.php on line 18
+[02-Dec-2022 12:37:46 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/database.php on line 18
+[02-Dec-2022 12:37:53 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/filesystems.php on line 16
+[02-Dec-2022 12:37:56 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/hashing.php on line 32
+[02-Dec-2022 12:38:00 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/logging.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/logging.php on line 20
+[02-Dec-2022 12:38:03 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/mail.php on line 16
+[02-Dec-2022 12:38:06 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/queue.php on line 16
+[02-Dec-2022 12:38:11 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/sanctum.php on line 18
+[02-Dec-2022 12:38:15 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/services.php on line 18
+[02-Dec-2022 12:38:20 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/session.php on line 21
+[02-Dec-2022 12:38:23 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/sodabaz/public_html/MasterMotor/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/view.php on line 17
+[04-Dec-2022 14:45:08 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/app.php on line 18
+[04-Dec-2022 14:45:13 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php on line 18
+[04-Dec-2022 14:45:18 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/cache.php on line 18
+[04-Dec-2022 14:45:23 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/database.php on line 18
+[04-Dec-2022 14:45:28 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/filesystems.php on line 16
+[04-Dec-2022 14:45:33 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/hashing.php on line 32
+[04-Dec-2022 14:45:38 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/logging.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/logging.php on line 20
+[04-Dec-2022 14:45:42 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/mail.php on line 16
+[04-Dec-2022 14:45:48 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/queue.php on line 16
+[04-Dec-2022 14:45:54 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/sanctum.php on line 18
+[04-Dec-2022 14:45:58 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/services.php on line 18
+[04-Dec-2022 14:46:07 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/session.php on line 21
+[04-Dec-2022 14:46:11 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/sodabaz/public_html/MasterMotor/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/view.php on line 17
+[06-Dec-2022 18:37:17 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/app.php on line 18
+[06-Dec-2022 18:37:22 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php on line 18
+[06-Dec-2022 18:37:27 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/cache.php on line 18
+[06-Dec-2022 18:37:34 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/database.php on line 18
+[06-Dec-2022 18:37:42 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/filesystems.php on line 16
+[06-Dec-2022 18:37:47 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/hashing.php on line 32
+[06-Dec-2022 18:37:52 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/logging.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/logging.php on line 20
+[06-Dec-2022 18:37:57 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/mail.php on line 16
+[06-Dec-2022 18:38:02 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/queue.php on line 16
+[06-Dec-2022 18:38:07 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/sanctum.php on line 18
+[06-Dec-2022 18:38:11 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/services.php on line 18
+[06-Dec-2022 18:38:15 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/session.php on line 21
+[06-Dec-2022 18:38:21 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/sodabaz/public_html/MasterMotor/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/view.php on line 17
+[17-Dec-2022 05:58:33 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/app.php on line 18
+[17-Dec-2022 05:58:38 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php on line 18
+[17-Dec-2022 05:58:41 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/cache.php on line 18
+[17-Dec-2022 05:58:47 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/database.php on line 18
+[17-Dec-2022 05:58:56 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/filesystems.php on line 16
+[17-Dec-2022 05:59:00 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/hashing.php on line 32
+[17-Dec-2022 05:59:04 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/logging.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/logging.php on line 20
+[17-Dec-2022 05:59:06 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/mail.php on line 16
+[17-Dec-2022 05:59:08 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/queue.php on line 16
+[17-Dec-2022 05:59:10 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/sanctum.php on line 18
+[17-Dec-2022 05:59:13 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/services.php on line 18
+[17-Dec-2022 05:59:15 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/session.php on line 21
+[17-Dec-2022 05:59:18 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/sodabaz/public_html/MasterMotor/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/view.php on line 17
+[18-Dec-2022 23:31:09 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/app.php on line 18
+[18-Dec-2022 23:31:16 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/broadcasting.php on line 18
+[18-Dec-2022 23:31:23 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/cache.php on line 18
+[18-Dec-2022 23:31:30 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/database.php on line 18
+[18-Dec-2022 23:31:41 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/filesystems.php on line 16
+[18-Dec-2022 23:31:48 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/hashing.php on line 32
+[18-Dec-2022 23:31:55 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/logging.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/logging.php on line 20
+[18-Dec-2022 23:32:02 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/mail.php on line 16
+[18-Dec-2022 23:32:08 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/queue.php on line 16
+[18-Dec-2022 23:32:16 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/sanctum.php on line 18
+[18-Dec-2022 23:32:22 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/services.php on line 18
+[18-Dec-2022 23:32:30 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/sodabaz/public_html/MasterMotor/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/session.php on line 21
+[18-Dec-2022 23:32:39 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/sodabaz/public_html/MasterMotor/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/config/view.php on line 17

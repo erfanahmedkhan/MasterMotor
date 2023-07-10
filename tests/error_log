@@ -1,0 +1,28 @@
+[27-Nov-2022 19:42:06 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Testing\TestCase" not found in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php on line 7
+[29-Nov-2022 01:36:30 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Testing\TestCase" not found in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php on line 7
+[02-Dec-2022 12:22:01 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Testing\TestCase" not found in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php on line 7
+[04-Dec-2022 14:54:09 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Testing\TestCase" not found in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php on line 7
+[06-Dec-2022 18:55:01 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Testing\TestCase" not found in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php on line 7
+[17-Dec-2022 05:49:32 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Testing\TestCase" not found in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php on line 7
+[18-Dec-2022 23:42:25 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Testing\TestCase" not found in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/tests/TestCase.php on line 7

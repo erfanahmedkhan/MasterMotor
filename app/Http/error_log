@@ -1,0 +1,20 @@
+[29-Nov-2022 01:25:07 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Kernel.php on line 7
+[04-Dec-2022 14:40:51 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Kernel.php on line 7
+[06-Dec-2022 18:33:43 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Kernel.php on line 7
+[08-Dec-2022 22:21:05 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Kernel.php on line 7
+[18-Dec-2022 23:25:57 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Kernel.php on line 7

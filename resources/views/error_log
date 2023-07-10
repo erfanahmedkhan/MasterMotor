@@ -1,0 +1,12 @@
+[29-Nov-2022 01:33:38 Europe/Helsinki] PHP Warning:  Undefined variable $row in /home/sodabaz/public_html/MasterMotor/resources/views/customers.blade.php on line 75
+[29-Nov-2022 01:33:38 Europe/Helsinki] PHP Warning:  Attempt to read property "date" on null in /home/sodabaz/public_html/MasterMotor/resources/views/customers.blade.php on line 75
+[04-Dec-2022 14:50:56 Europe/Helsinki] PHP Warning:  Undefined variable $row in /home/sodabaz/public_html/MasterMotor/resources/views/customers.blade.php on line 74
+[04-Dec-2022 14:50:56 Europe/Helsinki] PHP Warning:  Attempt to read property "date" on null in /home/sodabaz/public_html/MasterMotor/resources/views/customers.blade.php on line 74
+[18-Dec-2022 23:39:09 Europe/Helsinki] PHP Warning:  Undefined variable $row in /home/sodabaz/public_html/MasterMotor/resources/views/complaint-management.blade.php on line 90
+[18-Dec-2022 23:39:09 Europe/Helsinki] PHP Warning:  Attempt to read property "created_at" on null in /home/sodabaz/public_html/MasterMotor/resources/views/complaint-management.blade.php on line 90
+[18-Dec-2022 23:39:28 Europe/Helsinki] PHP Warning:  Undefined variable $item in /home/sodabaz/public_html/MasterMotor/resources/views/customer-inquiries-list.blade.php on line 154
+[18-Dec-2022 23:39:28 Europe/Helsinki] PHP Warning:  Attempt to read property "start_date" on null in /home/sodabaz/public_html/MasterMotor/resources/views/customer-inquiries-list.blade.php on line 154
+[18-Dec-2022 23:39:28 Europe/Helsinki] PHP Warning:  Undefined variable $item in /home/sodabaz/public_html/MasterMotor/resources/views/customer-inquiries-list.blade.php on line 155
+[18-Dec-2022 23:39:28 Europe/Helsinki] PHP Warning:  Attempt to read property "end_date" on null in /home/sodabaz/public_html/MasterMotor/resources/views/customer-inquiries-list.blade.php on line 155
+[18-Dec-2022 23:39:30 Europe/Helsinki] PHP Warning:  Undefined variable $row in /home/sodabaz/public_html/MasterMotor/resources/views/customers.blade.php on line 75
+[18-Dec-2022 23:39:30 Europe/Helsinki] PHP Warning:  Attempt to read property "date" on null in /home/sodabaz/public_html/MasterMotor/resources/views/customers.blade.php on line 75

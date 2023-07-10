@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Numans");
+
+html,
+body {
+    background-image: url("../../images/changan-autos.jpeg") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    height: 100% !important;
+    font-family: "Numans", sans-serif !important;
+}
+
+.alert-danger {
+    color: #ffffff !important;
+    background-color: #fc2539 !important;
+    border-color: #f5c6cb !important;
+}
+
+.container {
+    height: 100% !important;
+    align-content: center !important;
+}
+
+.card {
+    height: 333px !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    width: 400px !important;
+    background-color: rgba(233, 233, 233, 0.5) !important;
+}
+
+#logo-image {
+    height: 12vh !important;
+}
+
+#crm-heading {
+    font-weight: bold !important;
+}
+
+.input-group-prepend label {
+    width: 50px !important;
+    background-color: #f58935 !important;
+    color: black !important;
+    border: 0 !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.login_btn {
+    color: black !important;
+    background-color: #f58935 !important;
+    width: 50% !important;
+    margin-left: 25% !important;
+    font-weight: bold !important;
+}
+
+.bg-black {
+    background: black !important;
+    width: fit-content !important;
+    padding: 2;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #007bff !important;
+    background: transparent !important;
+}

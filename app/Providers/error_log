@@ -1,0 +1,100 @@
+[29-Nov-2022 01:26:25 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/AppServiceProvider.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/AppServiceProvider.php on line 7
+[29-Nov-2022 01:26:28 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\AuthServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/AuthServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/AuthServiceProvider.php on line 8
+[29-Nov-2022 01:26:31 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/BroadcastServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/BroadcastServiceProvider.php on line 8
+[29-Nov-2022 01:26:34 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\EventServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/EventServiceProvider.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/EventServiceProvider.php on line 10
+[29-Nov-2022 01:26:37 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\RouteServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/RouteServiceProvider.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/RouteServiceProvider.php on line 11
+[04-Dec-2022 14:43:29 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/AppServiceProvider.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/AppServiceProvider.php on line 7
+[04-Dec-2022 14:43:36 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\AuthServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/AuthServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/AuthServiceProvider.php on line 8
+[04-Dec-2022 14:43:39 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/BroadcastServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/BroadcastServiceProvider.php on line 8
+[04-Dec-2022 14:43:43 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\EventServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/EventServiceProvider.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/EventServiceProvider.php on line 10
+[04-Dec-2022 14:43:47 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\RouteServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/RouteServiceProvider.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/RouteServiceProvider.php on line 11
+[06-Dec-2022 18:36:15 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/AppServiceProvider.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/AppServiceProvider.php on line 7
+[06-Dec-2022 18:36:19 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\AuthServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/AuthServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/AuthServiceProvider.php on line 8
+[06-Dec-2022 18:36:24 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/BroadcastServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/BroadcastServiceProvider.php on line 8
+[06-Dec-2022 18:36:30 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\EventServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/EventServiceProvider.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/EventServiceProvider.php on line 10
+[06-Dec-2022 18:36:34 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\RouteServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/RouteServiceProvider.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/RouteServiceProvider.php on line 11
+[08-Dec-2022 22:22:07 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/AppServiceProvider.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/AppServiceProvider.php on line 7
+[08-Dec-2022 22:22:23 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\AuthServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/AuthServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/AuthServiceProvider.php on line 8
+[08-Dec-2022 22:22:25 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/BroadcastServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/BroadcastServiceProvider.php on line 8
+[08-Dec-2022 22:22:58 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\EventServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/EventServiceProvider.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/EventServiceProvider.php on line 10
+[08-Dec-2022 22:23:00 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\RouteServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/RouteServiceProvider.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/RouteServiceProvider.php on line 11
+[18-Dec-2022 23:28:38 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/AppServiceProvider.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/AppServiceProvider.php on line 7
+[18-Dec-2022 23:28:45 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\AuthServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/AuthServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/AuthServiceProvider.php on line 8
+[18-Dec-2022 23:28:53 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/BroadcastServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/BroadcastServiceProvider.php on line 8
+[18-Dec-2022 23:29:00 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\EventServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/EventServiceProvider.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/EventServiceProvider.php on line 10
+[18-Dec-2022 23:29:08 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\RouteServiceProvider" not found in /home/sodabaz/public_html/MasterMotor/app/Providers/RouteServiceProvider.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Providers/RouteServiceProvider.php on line 11

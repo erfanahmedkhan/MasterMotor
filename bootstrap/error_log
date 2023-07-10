@@ -1,0 +1,28 @@
+[27-Nov-2022 19:52:25 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php on line 14
+[29-Nov-2022 01:26:57 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php on line 14
+[02-Dec-2022 12:36:50 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php on line 14
+[04-Dec-2022 14:44:18 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php on line 14
+[06-Dec-2022 18:36:41 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php on line 14
+[17-Dec-2022 05:58:15 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php on line 14
+[18-Dec-2022 23:29:50 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/bootstrap/app.php on line 14

@@ -1,0 +1,44 @@
+[06-Dec-2022 18:33:21 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Controller" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/Controller.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/Controller.php on line 10
+[06-Dec-2022 18:33:26 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/CustomerController.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/CustomerController.php on line 18
+[06-Dec-2022 18:33:30 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/MediaController.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/MediaController.php on line 8
+[06-Dec-2022 18:33:36 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/UserController.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/UserController.php on line 8
+[08-Dec-2022 22:20:52 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Controller" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/Controller.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/Controller.php on line 10
+[08-Dec-2022 22:20:55 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/CustomerController.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/CustomerController.php on line 18
+[08-Dec-2022 22:21:01 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/UserController.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/UserController.php on line 8
+[12-Dec-2022 22:11:35 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/AjaxController.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/AjaxController.php on line 8
+[12-Dec-2022 22:11:39 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Controller" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/Controller.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/Controller.php on line 10
+[12-Dec-2022 22:11:43 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/CustomerController.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/CustomerController.php on line 18
+[12-Dec-2022 22:11:46 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/UserController.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/app/Http/Controllers/UserController.php on line 8

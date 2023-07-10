@@ -1,0 +1,19 @@
+[16-Dec-2022 08:42:52 Europe/Helsinki] PHP Warning:  require(/home/sodabaz/public_html/MasterMotor/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/sodabaz/public_html/MasterMotor/index.php on line 34
+[16-Dec-2022 08:42:52 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Failed opening required '/home/sodabaz/public_html/MasterMotor/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/sodabaz/public_html/MasterMotor/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/index.php on line 34
+[16-Dec-2022 08:42:58 Europe/Helsinki] PHP Warning:  require(/home/sodabaz/public_html/MasterMotor/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/sodabaz/public_html/MasterMotor/index.php on line 34
+[16-Dec-2022 08:42:58 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Failed opening required '/home/sodabaz/public_html/MasterMotor/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/sodabaz/public_html/MasterMotor/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/index.php on line 34
+[16-Dec-2022 08:46:19 Europe/Helsinki] PHP Warning:  require(/home/sodabaz/public_html/MasterMotorvendor/autoload.php): Failed to open stream: No such file or directory in /home/sodabaz/public_html/MasterMotor/index.php on line 34
+[16-Dec-2022 08:46:19 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Failed opening required '/home/sodabaz/public_html/MasterMotorvendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/sodabaz/public_html/MasterMotor/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/index.php on line 34
+[16-Dec-2022 08:46:58 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Call to undefined function redirect() in /home/sodabaz/public_html/MasterMotor/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/sodabaz/public_html/MasterMotor/index.php on line 2

@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../../../public/Fonts/Poppins-Regular.ttf');
+}
+
+
+
+.mainContainerFbNoti {
+    width: 100%;
+    height: 80vh;
+    /* background-color: red; */
+    padding: 20px 10% 20px 10%;
+}
+
+.subContainerFbNoti {
+    width: 100%;
+    height: 100%;
+    background-color: #F0F2F3;
+    display: flex;
+    /* justify-content: center; */
+    /* border-radius: 10px; */
+    padding: 10px;
+}
+
+.leftContainer {
+    width: 30%;
+    /* background-color: #373A3B; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.notificationsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.notificationsDiv:hover {
+    background-color: #E4E6E7;
+    cursor: pointer;
+}
+
+.links {
+    text-decoration: none;
+    color: #222526;
+    font-family: Poppins-Regular;
+    /* margin-top: 4px; */
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+/* .links:hover {
+    background-color: #E4E6E7;
+} */
+
+.notificationNumber {
+    color: white;
+    font-family: Poppins-Regular;
+    font-size: 17px;
+    margin-top: 4px;
+    margin-right: 15px;
+    background-color: red;
+    border-radius: 50px;
+    /* padding: 2px; */
+    width: 25px;
+    height: 25px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.linksDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.linksDiv:hover {
+    background-color: #E4E6E7;
+}
+.linksImgMessages {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+
+.linksImg {
+    width: 20px;
+    height: 20px;
+    /* border-radius: 50px; */
+    margin-left: 10px;
+}
+
+.rightContainer {
+    width: 69%;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: scroll;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.rightContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.mainHeading {
+    font-family: Poppins-Regular;
+    font-size: 25px;
+}
+.subHeading {
+    font-family: Poppins-Regular;
+    font-size: 21px;
+    color: #444443;
+    margin-top: 10px;
+}
+
+.notificationDiv {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    padding: 16px 1px 16px 5px;
+}
+
+.notificationDiv:hover {
+    background-color: #F2F2EF;
+    border-radius: 10px;
+}
+
+.profimg {
+    width: 50px;
+    border-radius: 50px;
+}
+
+.message {
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    color: #050505;
+}
+.nameOfPerson {
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    color: black;
+    margin-left: 10px !important;   
+    font-weight: 600; 
+}
+
+.timing {
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    color: #2C84F5;
+    margin-left: 10px !important;
+}
