@@ -1,5 +1,5 @@
 @extends('template')
-@section('title', 'CSI Survey')
+@section('title', 'DCSI Management')
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('assets/css/call-recieve-details.css') }}">

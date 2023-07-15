@@ -11,8 +11,9 @@
     <div class="csi_main_div">
         <div class="fixme col-md-12">
             <div class="csi_table_main_div">
-                <div style="display: flex; flex-direction: row; gap: 15px;">
-                    <div class="col-md-4">
+                {{-- <div style="display: flex; flex-direction: row; gap: 15px;"> --}}
+                <div style="gap: 15px;">
+                    <div class="col-4">
                         <label for=""> Dealership : </label>
                         <select class="form-control bg-white" name="" id="" style="font-size: 12px;">
                             <option value="" disabled selected> Select Dealership </option>
@@ -20,15 +21,15 @@
                             <option value="two"> 11010 / Yazdani Motor </option>
                         </select>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-3">
                         <label for=""> Month : </label>
                         <input class="form-control shadow-sm  bg-white" type="month" id="startdate">
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-3">
                         <label for=""> Year : </label>
                         <input class="form-control shadow-sm  bg-white" type="month" id="enddate">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-6">
                     <label for=""> Analytics : </label>
                     <label for=""> Individual Question : </label>
                     <select class="form-control bg-white" name="" id="" style="font-size: 12px;">

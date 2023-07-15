@@ -154,8 +154,6 @@
                                 </label>
                             </div>
                             <select name="role" id="role" class="form-control" required>
-                                <option value="">Select Role</option>
-                                <option value="1|Super Admin">Admin</option>
                                 <option value="2|Agent">Agent</option>
                             </select>
                         </div>

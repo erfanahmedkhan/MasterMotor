@@ -1,8 +1,7 @@
 @extends('template')
 @section('title', 'Complaints Management')
 @section('content')
-    {{-- CUSTOM CSS --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/complaint-management.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/complaints-management.css') }}">
     <!-- main-content STARTS -->
     <div class="main-content mt-2">
         <!-- section STARTS -->
@@ -15,15 +14,17 @@
                     <div class="row maincard ml-2 ">
                         <div class="col-12">
                             <!-- CARD STARTS -->
-                            <div class="card w-95">
+                            <div class="card w-100">
                                 <!-- card-header STARTS -->
                                 <div class="card-header">
                                     <i class="fa fa-arrow-circle-left text text-danger" onclick="goback()"
                                         style="cursor: pointer; font-size: 20px"></i>
                                     &nbsp;
                                     <strong class="card-title">Complaints Management</strong>
-                                    <a href="{{ url('create-customer-inquiry/add') }}" class="btn btn-round btn-primary"
-                                        style="float: right">New Ticket&nbsp;<i class="fa fa-plus-circle"></i></a>
+                                    {{-- New Ticket --}}
+                                    <a href="{{ url('create-customers-complaints/new') }}"
+                                        class="btn btn-round btn-primary float-right" target="_blank">New
+                                        Ticket&nbsp;<i class="fa fa-plus-circle"></i></a>
                                 </div>
                                 <!-- card-body STARTS -->
                                 <div class="card-body embed-responsive" style="overflow: auto">
@@ -60,9 +61,9 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <!-- TABLE STARTS -->
-                                            <table class="example table table-hover  nowrap">
+                                            <table class="example table table-hover nowrap">
                                                 {{-- <caption>Complaints List</caption> --}}
-                                                <thead class="bg bg-primary text-white text-center tablethead">
+                                                <thead class="bg bg-primary text-white">
                                                     <tr>
                                                         <th>#</th>
                                                         <th>Complaint&nbsp;#</th>
@@ -72,7 +73,7 @@
                                                         <th>Dealer</th>
                                                         <th>Customer</th>
                                                         <th>Mobile</th>
-                                                        <th>Date</th>
+                                                        <th>Complaint&nbsp;Date</th>
                                                         <th class="text-center">Status&nbsp;</th>
                                                         <th>Aging</th>
                                                         <th class="text-center">Action</th>
@@ -83,166 +84,149 @@
                                                         $n = 1;
                                                         $today = date('Y-m-d');
                                                     @endphp
+                                                    {{-- FOREACH STARTS --}}
                                                     @foreach ($list as $row)
                                                         <?php $date = strtotime($row->created_at); ?>
                                                         <tr>
                                                             <td>{{ $n }}</td>
+                                                            {{-- Complaint # --}}
                                                             <td class="text-justify">{{ $row->complain_number }}</td>
+                                                            {{-- Complaint Type --}}
                                                             <td class="text-justify">{{ $row->complaint_type }}</td>
+                                                            {{-- CPT Type --}}
                                                             <td class="custom-truncate text-justify"
                                                                 title="{{ $row->complain_type }}">
                                                                 {{ $row->complain_type }}
                                                             </td>
+                                                            {{-- SPG Type --}}
                                                             <td class="custom-truncate text-justify"
                                                                 title="{{ $row->complain_spg_type }}">
                                                                 {{ $row->complain_spg_type }}
                                                             </td>
+                                                            {{-- Dealer --}}
                                                             <td class="text-justify">{{ $row->dealer_name }}</td>
+                                                            {{-- Customer --}}
                                                             <td class="text-justify">{{ $row->customer_name }}</td>
+                                                            {{-- Mobile --}}
                                                             <td class="text-justify">{{ $row->mobile }}</td>
-                                                            <!--<td>{{ date('d/m/Y', $date) }}</td>-->
+                                                            {{-- Complaint Date --}}
                                                             <?php $start_date = date_create($row->createddate); ?>
-                                                            <td>{{ date_format($start_date, 'd-m-Y') }}</td>
+                                                            <td class="text-center">{{ date_format($start_date, 'd-m-Y') }}
+                                                            </td>
                                                             @php
-                                                                $complain_date = new \Carbon\Carbon($row->createddate);
+                                                                $complaint_dt = new \Carbon\Carbon($row->created_at);
                                                                 $today = date('Y-m-d');
-                                                                $aging = $complain_date->diff($today)->days;
+                                                                $aging = $complaint_dt->diff($today)->days;
                                                             @endphp
-                                                            {{-- STATUS STARTS --}}
-                                                            <!--Status 'Open' by default with Aging 0-->
+                                                            {{-- STATUS 'Open' WITH AGING 0 OR WITH AGING < 1 --}}
                                                             @if ($aging < 1 && $row->status == 'Open')
-                                                                <td class="text-left">
+                                                                <td class="text-justify">
                                                                     <span
                                                                         class="badge bg-orange shadow-sm text-white">{{ $row->status }}</span>
-                                                                    <a href="{{ url('complain-status-log/' . $row->complain_number) }}"
-                                                                        class="badge bg-primary shadow-sm text-white">
-                                                                        <i class="fa fa-info-circle"></i>
-                                                                    </a>
+
                                                                 </td>
-                                                                <!--Status 'Open' with Aging > 0-->
+                                                                {{-- STATUS 'Open' WITH AGING > 0 --}}
                                                             @elseif($aging > 0 && $row->status == 'Open')
-                                                                <td class="text-left">
+                                                                <td class="text-justify">
                                                                     <span
                                                                         class="badge bg-orange shadow-sm text-white">{{ $row->status }}&nbsp;!!</span>
-                                                                    <a href="{{ url('complain-status-log/' . $row->complain_number) }}"
-                                                                        class="badge bg-primary shadow-sm text-white">
-                                                                        <i class="fa fa-info-circle"></i>
-                                                                    </a>
+
                                                                 </td>
-                                                                <!--Status 'In-Process / In-process' -->
+                                                                {{-- STATUS 'In-Process / In-process' --}}
                                                             @elseif($row->status == 'In-Process' || $row->status == 'In-process')
-                                                                <td class="text-left">
+                                                                <td class="text-justify">
                                                                     <span
                                                                         class="badge bg-yellow shadow-sm text-black">{{ $row->status }}</span>
-                                                                    <a href="{{ url('complain-status-log/' . $row->complain_number) }}"
-                                                                        class="badge bg-primary shadow-sm text-white">
-                                                                        <i class="fa fa-info-circle"></i>
-                                                                    </a>
+
                                                                 </td>
-                                                                <!--Status 'Pending' -->
+                                                                {{-- STATUS 'Pending' --}}
                                                             @elseif($row->status == 'Pending')
-                                                                <td class="text-left">
+                                                                <td class="text-justify">
                                                                     <span
                                                                         class="badge bg-danger shadow-sm text-white">{{ $row->status }}</span>
-                                                                    <a href="{{ url('complain-status-log/' . $row->complain_number) }}"
-                                                                        class="badge bg-primary shadow-sm text-white">
-                                                                        <i class="fa fa-info-circle"></i>
-                                                                    </a>
+
                                                                 </td>
-                                                                <!--Status 'Resolve / Resolved' -->
+                                                                {{-- STATUS 'Resolve / Resolved' --}}
                                                             @elseif($row->status == 'Resolve' || $row->status == 'Resolved')
-                                                                <td class="text-left">
+                                                                <td class="text-justify">
                                                                     <span
                                                                         class="badge bg-success shadow-sm text-white">{{ $row->status }}</span>
-                                                                    <a href="{{ url('complain-status-log/' . $row->complain_number) }}"
-                                                                        class="badge bg-primary shadow-sm text-white">
-                                                                        <i class="fa fa-info-circle"></i>
-                                                                    </a>
+
                                                                 </td>
-                                                                <!--Status 'Not Resolved' -->
+                                                                {{-- STATUS 'Not Resolved' --}}
                                                             @elseif($row->status == 'Not Resolved')
-                                                                <td class="text-left">
+                                                                <td class="text-justify">
                                                                     <span
                                                                         class="badge bg-black shadow-sm text-white">{{ $row->status }}</span>
-                                                                    <a href="{{ url('complain-status-log/' . $row->complain_number) }}"
-                                                                        class="badge bg-primary shadow-sm text-white">
-                                                                        <i class="fa fa-info-circle"></i>
-                                                                    </a>
+
                                                                 </td>
-                                                                <!--Request to force close' -->
+                                                                {{-- STATUS 'Request to force close' --}}
                                                             @elseif($row->status == 'Request to force close')
-                                                                <td class="text-left">
-                                                                    <span class="badge bg-gray shadow-sm text-white">Request
-                                                                        to<br>force close</span>
-                                                                    <a href="{{ url('complain-status-log/' . $row->complain_number) }}"
-                                                                        class="badge bg-primary shadow-sm text-white">
-                                                                        <i class="fa fa-info-circle"></i>
-                                                                    </a>
+                                                                <td class="text-justify">
+                                                                    <span class="badge bg-gray shadow-sm text-white">Req.
+                                                                        to force close</span>
+
                                                                 </td>
-                                                                <!--Force closed-->
+                                                                {{-- STATUS 'Force closed' --}}
                                                             @elseif($row->status == 'Force closed')
-                                                                <td class="text-left">
+                                                                <td class="text-justify">
                                                                     <span
                                                                         class="badge bg-primary shadow-sm text-white">{{ $row->status }}</span>
-                                                                    <a href="{{ url('complain-status-log/' . $row->complain_number) }}"
-                                                                        class="badge bg-primary shadow-sm text-white">
-                                                                        <i class="fa fa-info-circle"></i>
-                                                                    </a>
+
                                                                 </td>
-                                                                <!--Status = 'Closed'-->
+                                                                {{-- STATUS 'Closed' --}}
                                                             @elseif($row->status == 'Closed')
-                                                                <td class="text-left">
+                                                                <td class="text-justify">
                                                                     <span
                                                                         class="badge bg-primary shadow-sm text-white">{{ $row->status }}</span>
-                                                                    <a href="{{ url('complain-status-log/' . $row->complain_number) }}"
-                                                                        class="badge bg-primary shadow-sm text-white">
-                                                                        <i class="fa fa-info-circle"></i>
-                                                                    </a>
+
                                                                 </td>
                                                             @else
-                                                                <td class="text-left">
+                                                                <td class="text-justify">
                                                                     <span
                                                                         class="badge bg-primary shadow-sm text-white">{{ $row->status }}</span>
-                                                                    <a href="{{ url('complain-status-log/' . $row->complain_number) }}"
-                                                                        class="badge bg-primary shadow-sm text-white">
-                                                                        <i class="fa fa-info-circle"></i>
-                                                                    </a>
+
                                                                 </td>
                                                             @endif
-                                                            {{-- STATUS ENDS HERE --}}
-                                                            {{-- AGING STARTS --}}
-                                                            {{-- AGING WHEN status = 'Closed'  --}}
+                                                            {{-- AGING WHEN status = 'Closed' || status == 'Force closed' --}}
                                                             @if ($row->status == 'Closed' || $row->status == 'Force closed')
                                                                 <td class="text-center text-primary">{{ $row->aging }}
+                                                                    <a href="{{ url('complain-status-log/' . $row->complain_number) }}"
+                                                                        class="badge shadow-sm text-success">
+                                                                        <i class="fa fa-info-circle"></i>
+                                                                    </a>
                                                                 </td>
                                                                 {{-- AGING WHEN status != 'Closed' --}}
                                                             @else
                                                                 <td class="text-center">{{ $aging }}
+                                                                    &nbsp;
+                                                                    <a href="{{ url('complain-status-log/' . $row->complain_number) }}"
+                                                                        class="badge shadow-sm text-primary">
+                                                                        <i class="fa fa-info-circle"></i>
+                                                                    </a>
                                                                 </td>
                                                             @endif
-                                                            {{-- AGING ENDS HERE --}}
-                                                            {{-- ACTION STARTS --}}
+                                                            {{-- ACTION --}}
                                                             <td class="text-left">
-                                                                <a href="{{ url('complain-details/' . $row->id) }}"
+                                                                <a href="{{ url('complaint-details/' . $row->id) }}"
                                                                     class="badge bg-primary shadow-sm text-white">
-                                                                    Details
+                                                                    <span>Details</span>
                                                                 </a>
-                                                                @if ($row->complaint_type == "After Sale" || $row->complaint_type == "Sale" )
-                                                                <a href="{{ url('api-status-log/' . $row->complain_number) }}"
-                                                                    class="badge bg-secondary shadow-sm text-white"
-                                                                    title="Api Status">
-                                                                    <i class="fa fa-info-circle text-white"></i>
-                                                                </a>
+                                                                @if ($row->complaint_type == 'After Sale' || $row->complaint_type == 'Sale')
+                                                                    <a href="{{ url('api-status-log/' . $row->complain_number) }}"
+                                                                        class="badge bg-primary" title="Api Status">
+                                                                        <i class="fa fa-arrow-up text-white"></i>
+                                                                    </a>
                                                                 @endif
-                                                            </td>
-                                                                  {{-- ACTION ENDS HERE --}}
-                                                        </tr>
 
+                                                            </td>
+                                                            {{-- ACTION ENDS HERE --}}
+                                                        </tr>
                                                         @php
                                                             $n++;
                                                         @endphp
                                                     @endforeach
-
+                                                    {{-- FOREACH ENDS --}}
                                                 </tbody>
                                             </table>
                                             <!-- TABLE ENDS -->

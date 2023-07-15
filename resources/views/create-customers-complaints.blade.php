@@ -1,131 +1,127 @@
-@php
-    $title = 'CRM - Complaints';
-@endphp
 @extends('template')
+@section('title', 'New Ticket')
 @section('content')
-    <style>
-        #submitBtn {
-            display: none;
-        }
-
-        .form-control {
-            font-size: 12px;
-        }
-
-        .complaintBtn {
-            font-size: 10px !important;
-        }
-    </style>
-    <!-- main-content STARTS -->
-    <div class="main-content mt-3">
-        <!-- section STARTS -->
-        <section class="section">
-            <!-- section-body STARTS -->
-            <div class="section-body">
-                <!-- container STARTS -->
-                <div class="container-fluid">
-                    <!-- container ROW STARTS -->
+    {{-- CUSTOM CSS --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/create-complaints.css') }}">
+    <!-- main-content START -->
+    <div class="main-content m-2 p-2 rounded">
+        <!-- section START -->
+        <section class="section rounded">
+            <!-- section-body START -->
+            <div class="section-body rounded">
+                <!-- container START -->
+                <div class="container-fluid p-2 rounded">
                     <div class="row">
-                        <div class="col-md-12">
-
-
-                            @if (session('msg'))
-                                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                    <strong>{{ session('msg') }}</strong>
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                            @endif
-                            @if (session('error-msg'))
-                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                    <strong>{{ session('error-msg') }}</strong>
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                            @endif
-                            <!-- CARD STARTS -->
+                        <div class="col-12">
+                            <!-- card START -->
                             <div class="card">
-                                <!-- card-header STARTS -->
+                                <!-- card-header START -->
                                 <div class="card-header">
                                     <i class="fa fa-arrow-circle-left text text-danger" onclick="goback()"
                                         style="cursor: pointer; font-size: 20px"></i>
+                                    &nbsp;
                                     <strong class="card-title">&nbsp;Customer Complaint Form</strong>
                                 </div>
                                 <!-- card-body STARTS -->
                                 <div class="card-body embed-responsive" style="overflow: auto">
                                     <!-- <div class="card-body"> -->
                                     <!-- ROW STARTS -->
-                                    <form id="customerinquiryformid" action="{{ url('add-customer-inquiry') }}"
+                                    <form  action="{{ url('add-customer-complaint') }}"
                                         method="POST" enctype="multipart/form-data">
                                         @csrf
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <label for="mobile" class="form-label ">Mobile Number <span
-                                                        class="asterisk text-danger">*</span></label>
-                                                <input type="text" class="form-control shadow-sm  bg-white"
-                                                    id="mobile" name="mobile" pattern="[0-9]{12}" required
-                                                    value="{{ !empty($customer[0]->mobile) ? $customer[0]->mobile : '92' }}"
-                                                    required placeholder="92xxxxxxxxxx" title="Max lenth is 12">
-                                            </div>
-                                            <div class="col-md-3">
-                                                <label for="" class="form-label">Customer Name <span
+                                        <div class="row mt-2">
+                                            {{-- mobile --}}
+                                            <div class="col-2">
+                                                <label for="mobile" class="form-label ">Mobile Number&nbsp;<span
                                                         class="asterisk text-danger">*</span></label>
                                                 <input type="text" class="form-control shadow-sm bg-white rounded"
-                                                    id="customername" name="name" required
-                                                    value="{{ @$customer[0]->name }}" required placeholder="Customer Name">
+                                                    id="mobile" name="mobile" pattern="[0-9]{12}"
+                                                    value="{{ !empty($customer[0]->mobile) ? $customer[0]->mobile : '92' }}"
+                                                    placeholder="92xxxxxxxxxx" title="Max lenth is 12" required>
                                             </div>
-                                            <div class="col-md-3">
-                                                <label for="email" class="form-label">Email Address</label>
-                                                <input type="email" class="form-control shadow-sm  bg-white"
+                                            {{-- name --}}
+                                            <div class="col-2">
+                                                <label for="" class="form-label">Customer Name&nbsp;<span
+                                                        class="asterisk text-danger">*</span></label>
+                                                <input type="text" class="form-control shadow-sm bg-white rounded"
+                                                    id="customername" name="name" value="{{ @$customer[0]->name }}"
+                                                    placeholder="Full Name" required>
+                                            </div>
+                                            {{-- email --}}
+                                            <div class="col-3">
+                                                <label for="email" class="form-label">Email Address&nbsp;<span
+                                                        class="asterisk text-danger">*</span></label>
+                                                <input type="email" class="form-control shadow-sm bg-white rounded"
                                                     id="email" name="email" value="{{ @$customer[0]->email }}"
                                                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                                    placeholder="Email Address">
+                                                    placeholder="Active Email Address" required>
                                             </div>
-                                            <div class="col-md-3">
-                                                <label class="form-label">Select City <i class='text-danger'>*</i></label>
-                                                <select class="form-control bg-white " name="city" id="city"
+                                            {{-- city --}}
+                                            <div class="col-2">
+                                                <label class="form-label">Select City&nbsp;<span
+                                                        class="asterisk text-danger">*</span>
+                                                </label>
+                                                <select class="form-control bg-white rounded" name="city" id="city"
                                                     required onchange="Getcity(this.value)">
-                                                    <option value="0">Select City</option>
+                                                    <option value="">Select City</option>
                                                     @foreach ($city as $cities)
                                                         <option value="{{ $cities->id }}" <?php echo $cities->id == @$customer[0]->city ? 'selected' : ''; ?>>
                                                             {{ $cities->city }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
+                                            {{-- customer_type --}}
+                                            <div class="col-3">
+                                                <label for="Customer Type" class="form-label">Customer Type&nbsp;<span
+                                                        class="asterisk text-danger">*</span></label>
+                                                <select name="customer_type" id="customer_type"
+                                                    class="form-control shadow-sm">
+                                                    @foreach ($customer_type as $cust_type)
+                                                        <option value="{{ $cust_type->type }}">
+                                                            {{ $cust_type->type }}
+                                                        </option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                         </div>
+                                        {{-- BUTTONS ROW --}}
                                         <div class="row mt-2">
-                                            <div class="col-md-4"></div>
-                                            <div class="col-md-4"></div>
-                                            <div class="col-md-4">
+                                            <div class="col-4"></div>
+                                            <div class="col-4"></div>
+                                            <div class="col-4">
+                                                {{-- #aftersaleComplain /   After Sale --}}
                                                 <button type="button" style="float: right;"
                                                     class="btn btn-round btn-primary complaintBtn" id="aftersalecomplainBtn"
                                                     data-type="After Sale" onclick="getcomplaincpt(this);"
                                                     data-toggle="collapse" data-target="#aftersaleComplain"><i
                                                         class="fa fa-comments" aria-hidden="true"></i>&nbsp;After
                                                     Sale</button>
+                                                {{-- #saleComplain  /   Sale --}}
                                                 <button type="button" style="float: right;"
                                                     class="btn btn-round btn-primary complaintBtn mr-1" id="salecomplainBtn"
                                                     data-type="Sales" onclick="getcomplaincpt(this);" data-toggle="collapse"
                                                     data-target="#saleComplain"><i class="fa fa-comments"
                                                         aria-hidden="true"></i>&nbsp;Sale</button>
+                                                {{-- #presaleComplain   /   Pre-Sale --}}
                                                 <button type="button" style="float: right;"
                                                     class="btn btn-round btn-primary complaintBtn mr-1"
-                                                    id="presalecomplainBtn" data-toggle="collapse"
+                                                    id="presalecomplainBtn" data-type="Pre-Sale"
+                                                    onclick="getcomplaincpt(this);" data-toggle="collapse"
                                                     data-target="#presaleComplain"><i class="fa fa-comments"
-                                                        aria-hidden="true"></i>&nbsp;Pre-Sale </button>
+                                                        aria-hidden="true"></i>&nbsp;Pre-Sale</button>
+                                                {{-- #genComplain   /   General  --}}
                                                 <button type="button" style="float: right;"
                                                     class="btn btn-round btn-primary complaintBtn mr-1"
-                                                    id="gencomplainBtn" data-toggle="collapse"
+                                                    id="gencomplainBtn" data-type="General"
+                                                    onclick="getcomplaincpt(this);" data-toggle="collapse"
                                                     data-target="#genComplain"><i class="fa fa-comments"
-                                                        aria-hidden="true"></i>&nbsp;General </button>
+                                                        aria-hidden="true"></i>&nbsp;General</button>
                                             </div>
                                         </div>
-                                        <!--General Complaint (general_compaint) starts-->
+                                        <!--General Complaint (general_compaint) START-->
                                         <div class="row collapse complaint-div" id="genComplain">
                                             <div class="row">
-                                                <div class="col-md-12 mb-4">
+                                                <div class="col-12 mb-4">
                                                     <h5><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;General
                                                         Complaint</h5>
                                                 </div>
@@ -135,14 +131,14 @@
                                                     <label for="complaint_type_gen" class="form-label">Complaint
                                                         Type</label>
                                                     <input type="text"
-                                                        class="form-control shadow-sm p-3 mb-3 bg-white text-center complaint_type"
+                                                        class="form-control shadow-sm p-3 mb-3 text-center complaint_type"
                                                         name="complaint_type_gen" id="complaint_type_gen" value="General"
                                                         readonly>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-3">
-                                                    <label for="gen_complain_source" class="form-label">Select Source <i
+                                                    <label for="gen_complain_source" class="form-label">Source <i
                                                             class='text-danger'>*</i></label>
                                                     <select class="form-control shadow-sm bg-white"
                                                         name="gen_complain_source" id="gen_complain_source">
@@ -166,10 +162,11 @@
                                                     <label for="gen_complain_cpt_type" class="form-label">Complaint Type:
                                                         CPT</label>
                                                     <select class="form-control shadow-sm  bg-white cpt complain_cpt_type"
-                                                        name="gen_complain_cpt_type" id="gen_complain_cpt_type">
-                                                        <option value="">Select Complain CPT</option>
-                                                        <option value="3">Publicity and promotion</option>
+                                                        name="gen_complain_cpt_type" id="gen_complain_cpt_type"
+                                                        onchange="Getcpt(this.value)">
+                                                        <option value="">Select CPT Type</option>
                                                     </select>
+
                                                 </div>
                                                 <!-- Complain Type: SPG -->
                                                 <div class="col-3">
@@ -177,10 +174,8 @@
                                                         SPG
                                                     </label>
                                                     <select class="form-control shadow-sm  bg-white complain_spg_type"
-                                                        name="gen_complain_spg_type" id="">
-                                                        <option value="">Select Complain SPG</option>
-                                                        <option value="3">Publicity and promotion</option>
-                                                    </select>
+                                                        id="gen_complain_spg_type" name="gen_complain_spg_type"
+                                                        onchange="Getspg(this.value)"></select>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -189,11 +184,9 @@
                                                     <label for="gen_complain_ccc_type" class="form-label">Complaint Type:
                                                         CCC
                                                     </label>
+
                                                     <select class="form-control shadow-sm bg-white complain_ccc_type"
-                                                        name="gen_complain_ccc_type" id="gen_complain_ccc_type">
-                                                        <option value="">Select Complain CCC</option>
-                                                        <option value="1">False propaganda</option>
-                                                    </select>
+                                                        id="gen_complain_ccc_type" name="gen_complain_ccc_type"></select>
                                                 </div>
                                                 <div class="col-3">
                                                     <label for="" class="form-label mt-2">Complaint
@@ -217,10 +210,10 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-12" id="">
-                                                    <label for="gen_complain_voc" class="form-label">Write VOC <i
+                                                    <label for="gen_complain_voc" class="form-label">VOC <i
                                                             class='text-danger'>*</i></label>
                                                     <textarea class="form-control shadow-sm bg-white rounded" id="gen_complain_voc" name="gen_complain_voc"
-                                                        placeholder="Write customer's complain here..." rows="5"></textarea>
+                                                        placeholder="Write customer's complaint here..." rows="10"></textarea>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -232,9 +225,10 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-12">
+                                                <div class="col-9"></div>
+                                                <div class="col-3">
                                                     <input type="submit" value="Submit" id=""
-                                                        class="btn btn-round btn-primary" style="float: right">
+                                                        class="btn btn-round btn-primary w-25" style="float: right">
                                                 </div>
                                             </div>
                                         </div>
@@ -242,7 +236,7 @@
                                         <!--Presale complaint starts-->
                                         <div class="row collapse complaint-div" id="presaleComplain">
                                             <div class="row">
-                                                <div class="col-md-12 mb-4">
+                                                <div class="col-12 mb-4">
                                                     <h5><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Complaint
                                                         Details</h5>
                                                 </div>
@@ -271,11 +265,11 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-3">
-                                                    <label for="dealership" class="form-label">Complain Dealership <i
-                                                            class='text-danger'>*</i></label>
+                                                    <label for="presale_complain_dealership" class="form-label">Complain
+                                                        Dealership <i class='text-danger'>*</i></label>
                                                     <select class="form-control bg-white complaindealership"
-                                                        id="" name="presale_complain_dealership"
-                                                        onchange="getDealerships()">
+                                                        id="presale_complain_dealership"
+                                                        name="presale_complain_dealership" onchange="getDealerships()">
                                                     </select>
                                                 </div>
                                                 <!-- Complain Type: CPT -->
@@ -284,9 +278,9 @@
                                                         Type:
                                                         CPT</label>
                                                     <select class="form-control shadow-sm  bg-white cpt complain_cpt_type"
-                                                        name="presale_complain_cpt_type" id="">
-                                                        <option value="">Select Complain CPT</option>
-                                                        <option value="3">Publicity and promotion</option>
+                                                        id="presale_complain_cpt_type" name="presale_complain_cpt_type"
+                                                        onchange="Getcpt(this.value)">
+                                                        <option value="">Select CPT Type</option>
                                                     </select>
                                                 </div>
                                                 <!-- Complain Type: SPG -->
@@ -295,9 +289,8 @@
                                                         Type:
                                                         SPG </label>
                                                     <select class="form-control shadow-sm  bg-white complain_spg_type"
-                                                        name="presale_complain_spg_type" id="">
-                                                        <option value="">Select Complain SPG</option>
-                                                        <option value="3">Publicity and promotion</option>
+                                                        name="presale_complain_spg_type" id="presale_complain_spg_type"
+                                                        onchange="Getspg(this.value)">
                                                     </select>
                                                 </div>
                                             </div>
@@ -308,9 +301,7 @@
                                                         Type:
                                                         CCC </label>
                                                     <select class="form-control shadow-sm bg-white complain_ccc_type"
-                                                        name="presale_complain_ccc_type" id="">
-                                                        <option value="">Select Complain CCC</option>
-                                                        <option value="1">False propaganda</option>
+                                                        name="presale_complain_ccc_type" id="presale_complain_ccc_type">
                                                     </select>
                                                 </div>
                                                 <div class="col-3">
@@ -336,10 +327,10 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <label for="presale_complain_voc" class="form-label">Write VOC <i
+                                                    <label for="presale_complain_voc" class="form-label">VOC <i
                                                             class='text-danger'>*</i></label>
-                                                    <textarea class="form-control shadow-sm bg-white rounded" id="" name="presale_complain_voc"
-                                                        placeholder="Write Complain Here..." rows="5"></textarea>
+                                                    <textarea class="form-control shadow-sm bg-white rounded" id="presale_complain_voc" name="presale_complain_voc"
+                                                        placeholder="Write customer's complaint here..." rows="10"></textarea>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -360,13 +351,13 @@
                                         <!--Presale complaints ends-->
                                         <!--Sale complaint starts-->
                                         <div class="row collapse complaint-div" id="saleComplain">
-                                            <div class="col-md-12 mb-4">
+                                            <div class="col-12 mb-4">
                                                 <h5><i class="fa fa-comments" aria-hidden="true"></i> Complaint Details
                                                 </h5>
                                             </div>
                                             <!-- row starts -->
                                             <div class="row">
-                                                <div class="col-md-2" id="">
+                                                <div class="col-2" id="">
                                                     <label for="complaint_type_sale" class="form-label">Complaint
                                                         Type</label>
                                                     <input type="text"
@@ -381,7 +372,6 @@
                                                             class='text-danger'>*</i></label>
                                                     <select class="form-control shadow-sm  bg-white"
                                                         name="sale_complain_source" id="">
-                                                        <option value="">Select Source</option>
                                                         @foreach ($source as $sale_sources)
                                                             <option value="{{ $sale_sources->source }}">
                                                                 {{ $sale_sources->source }}
@@ -395,6 +385,13 @@
                                                         class="form-control shadow-sm p-3 mb-3 bg-white dmsfield"
                                                         placeholder="PBO">
                                                 </div>
+                                                <div class="col-3">
+                                                    <label class="form-label">Sales Order Number</label>
+                                                    <input type="text" name="sale_sale_order_number"
+                                                        id="sale_so_number"
+                                                        class="form-control shadow-sm p-3 mb-3 bg-white"
+                                                        placeholder="Sales Order Number">
+                                                </div>
 
                                                 <div class="col-3">
                                                     <label for="sale_customer_vehicle" class="form-label">Vehicle</label>
@@ -403,7 +400,6 @@
                                                         class="form-control shadow-sm p-3 mb-3  dmsfield customer_vehicle"
                                                         readonly>
                                                 </div>
-
                                                 <div class="col-3">
                                                     <label for="sale_invoice_number" class="form-label">Invoice
                                                         Number</label>
@@ -411,18 +407,10 @@
                                                         id="sale_invoice_number"
                                                         class="form-control shadow-sm p-3 mb-3 dmsfield" readonly>
                                                 </div>
-
                                                 <div class="col-3">
                                                     <label for="sale_invoice_date" class="form-label">Invoice Date</label>
                                                     <input type="date" name="sale_invoice_date" id="sale_invoice_date"
                                                         class="form-control shadow-sm p-3 mb-3  dmsfield" readonly>
-                                                </div>
-                                                <div class="col-3">
-                                                    <label class="form-label">Sales Order Number</label>
-                                                    <input type="text" name="sale_sale_order_number"
-                                                        id="sale_sale_order_number"
-                                                        class="form-control shadow-sm p-3 mb-3 bg-white"
-                                                        placeholder="Sales Order Number">
                                                 </div>
                                                 <div class="col-3">
                                                     <label for="sale_vehicle_colour" class="form-label ">Vehicle Colour <i
@@ -439,7 +427,7 @@
                                                     <label for="dealership" class="form-label">Complain Dealership <i
                                                             class='text-danger'>*</i></label>
                                                     <select class="form-control bg-white complaindealership"
-                                                        id="" name="sale_complain_dealership"
+                                                        id="sale_complain_dealership" name="sale_complain_dealership"
                                                         onchange="getDealerships()">
                                                     </select>
                                                 </div>
@@ -490,10 +478,10 @@
                                             <!-- row starts -->
                                             <div class="row">
                                                 <div class="col-12 mt-2">
-                                                    <label for="sale_complain_voc" class="form-label">Write VOC <i
+                                                    <label for="sale_complain_voc" class="form-label">VOC <i
                                                             class='text-danger'>*</i></label>
                                                     <textarea class="form-control shadow-sm bg-white rounded" id="sale_complain_voc" name="sale_complain_voc"
-                                                        rows="5" placeholder="Write customer's complain here..."></textarea>
+                                                        rows="10" placeholder="Write customer's complaint here..."></textarea>
                                                 </div>
                                             </div>
                                             <!-- row starts -->
@@ -512,16 +500,15 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <!--Sale complaints ends-->
                                         <!--After Sale complaint starts-->
                                         <div class="row collapse complaint-div" id="aftersaleComplain">
-                                            <div class="col-md-12 mb-4">
+                                            <div class="col-12 mb-4">
                                                 <h5><i class="fa fa-comments" aria-hidden="true"></i> Complaint Details
                                                 </h5>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-2" id="">
+                                                <div class="col-2" id="">
                                                     <label for="complaint_type_aftersale" class="form-label">Complaint
                                                         Type</label>
                                                     <input type="text"
@@ -535,7 +522,6 @@
                                                             class='text-danger'>*</i></label>
                                                     <select class="form-control shadow-sm  bg-white"
                                                         name="aftersale_complain_source" id="">
-                                                        <option value="">Select Source</option>
                                                         @foreach ($source as $aftersale_sources)
                                                             <option value="{{ $aftersale_sources->source }}">
                                                                 {{ $aftersale_sources->source }}
@@ -544,54 +530,61 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-3">
-                                                    <label class="form-label">Registered Vehicles <i
-                                                            class='text-danger'>*</i></label>
-                                                    <select class="form-control shadow-sm bg-white customer_vehicle"
+                                                    <label class="form-label">PBO</label>
+                                                    <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
+                                                        name="aftersale_pbo" id="aftersale_pbo" placeholder="PBO">
+                                                </div>
+                                                <div class="col-3">
+                                                    <label class="form-label">Chasis Number</label>
+                                                    <input type="text" class="form-control shadow-sm p-3 mb-3 bg"
+                                                        name="aftersale_chasis_number" id="aftersale_chasis_number"
+                                                        placeholder="Chasis Number">
+                                                </div>
+                                                <div class="col-3">
+                                                    <label class="form-label">Vehicle<i class='text-danger'>*</i></label>
+                                                    <input type="text" name="aftersale_customer_vehicle"
+                                                        id="aftersale_customer_vehicle"
+                                                        class="form-control shadow-sm p-3 mb-3" readonly>
+                                                    {{-- readonly --}}
+                                                    {{-- <select class="form-control shadow-sm bg-white customer_vehicle"
                                                         id="" name="aftersale_customer_vehicle">
                                                         <option value="">Select Customer Vehicle</option>>
                                                         @foreach ($vehicles as $Vehicle)
                                                             <option value="{{ $Vehicle->vehicle_name }}">
                                                                 {{ $Vehicle->vehicle_name }}</option>
                                                         @endforeach
-                                                    </select>
-                                                </div>
-                                                <div class="col-3">
-                                                    <label class="form-label">Chasis Number</label>
-                                                    <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
-                                                        name="aftersale_chasis_number" id="aftersale_chasis_number"
-                                                        placeholder="Chasis Number">
+                                                    </select> --}}
                                                 </div>
                                                 <div class="col-3">
                                                     <label class="form-label">Engine Number</label>
-                                                    <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
+                                                    <input type="text" class="form-control shadow-sm p-3 mb-3"
                                                         name="aftersale_engine_number" id="aftersale_engine_number"
-                                                        placeholder="Engine Number">
-                                                </div>
-                                                <div class="col-3">
-                                                    <label class="form-label">PBO</label>
-                                                    <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
-                                                        id="aftersale_pbo" name="aftersale_pbo" placeholder="PBO">
+                                                        placeholder="Engine Number" readonly>
+                                                    {{-- readonly --}}
                                                 </div>
                                                 <div class="col-3 ">
                                                     <label class="form-label">Registration Number</label>
-                                                    <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
+                                                    <input type="text" class="form-control shadow-sm p-3 mb-3"
                                                         name="aftersale_registration_number"
                                                         id="aftersale_registration_number"
-                                                        placeholder="Registration Number">
+                                                        placeholder="Registration Number" readonly>
+                                                    {{-- readonly --}}
                                                 </div>
                                                 <div class="col-3">
                                                     <label for="aftersale_vehicle_colour" class="form-label">Vehicle
                                                         Colour <i class='text-danger'>*</i></label>
                                                     <input type="text" name="aftersale_vehicle_colour"
                                                         id="aftersale_vehicle_colour"
-                                                        class="form-control shadow-sm p-3 mb-3"
-                                                        placeholder="Color" readonly>
-
+                                                        class="form-control shadow-sm p-3 mb-3" placeholder="Color"
+                                                        readonly>
+                                                    {{-- readonly --}}
                                                 </div>
                                                 <div class="col-3 ">
                                                     <label class="form-label">Invoice Date</label>
-                                                    <input type="date" class="form-control shadow-sm p-3 mb-3"
-                                                        name="aftersale_invoice_date" id="aftersale_invoice_date" readonly>
+                                                    <input type="text" class="form-control shadow-sm p-3 mb-3"
+                                                        name="aftersale_invoice_date" id="aftersale_invoice_date"
+                                                        readonly>
+                                                    {{-- readonly --}}
                                                 </div>
                                             </div>
                                             <hr>
@@ -600,8 +593,8 @@
                                                     <label for="dealership" class="form-label">Complain Dealership <i
                                                             class='text-danger'>*</i></label>
                                                     <select class="form-control bg-white complaindealership"
-                                                        id="complain_dealership" name="aftersale_complain_dealership"
-                                                        onchange="getDealerships()">
+                                                        id="aftersale_complain_dealership"
+                                                        name="aftersale_complain_dealership" onchange="getDealerships()">
                                                     </select>
                                                 </div>
                                                 <div class="col-3">
@@ -611,20 +604,25 @@
                                                         id="aftersale_complain_cpt_type"
                                                         name="aftersale_complain_cpt_type"
                                                         onchange="two_function(this.value)">
-                                                        <option value="">Select Complain CPT</option>
+                                                        <option value="">Select CPT Type</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-3">
                                                     <label class="form-label ">Complain Type: SPG </label>
                                                     <select class="form-control shadow-sm  bg-white complain_spg_type"
-                                                        id="complain_spg_type" name="aftersale_complain_spg_type"
-                                                        onchange="Getspg(this.value)"></select>
+                                                        id="aftersale_complain_spg_type"
+                                                        name="aftersale_complain_spg_type" onchange="Getspg(this.value)">
+                                                        <option value="">Select SPG Type</option>
+                                                    </select>
                                                 </div>
                                                 <div class="col-3">
                                                     <label class="form-label ">Complain Type: CCC </label>
                                                     <select class="form-control shadow-sm bg-white complain_ccc_type"
-                                                        id="complain_ccc_type"
-                                                        name="aftersale_complain_ccc_type"></select>
+                                                        id="aftersale_complain_ccc_type"
+                                                        name="aftersale_complain_ccc_type">
+                                                        <option value="">Select CCC Type</option>
+                                                    </select>
+
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -647,10 +645,10 @@
                                             </div>
                                             <div class="row mt-2">
                                                 <div class="col-12">
-                                                    <label for="aftersale_complain_voc" class="form-label">Write VOC <i
+                                                    <label for="aftersale_complain_voc" class="form-label">VOC <i
                                                             class='text-danger'>*</i></label>
                                                     <textarea class="form-control shadow-sm bg-white rounded" id="aftersale_complain_voc" name="aftersale_complain_voc"
-                                                        rows="5" placeholder="Write customer's complain here..."></textarea>
+                                                        rows="10" placeholder="Write customer's complaint here..."></textarea>
                                                 </div>
                                             </div>
                                             <div class="row mt-2">
@@ -662,7 +660,7 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-12">
+                                                <div class="col-12">
                                                     <input type="submit" value="Submit" id=""
                                                         class="btn btn-round btn-primary" style="float: right">
                                                 </div>
@@ -671,16 +669,16 @@
                                         <!-- After Sale complaints ends-->
 
                                         <div class="row collapse" id="Complain">
-                                            <div class="col-md-12 mb-4">
+                                            <div class="col-12 mb-4">
                                                 <h5><i class="fa fa-comments" aria-hidden="true"></i> Complain Details
                                                 </h5>
                                             </div>
-                                            <div class="col-md-4" id="">
+                                            <div class="col-4" id="">
                                                 <label class="form-label">Select source <i
                                                         class='text-danger'>*</i></label>
                                                 <select class="form-control shadow-sm  bg-white" name="complain_source"
                                                     id="">
-                                                    <option value="">Select Source</option>
+
                                                     <option value="Call">Call</option>
                                                     <option value="SMS">SMS</option>
                                                     <option value="Email">Email</option>
@@ -690,7 +688,7 @@
                                                     <option value="Web Form">Web Form</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-4">
                                                 <label class="form-label ">Customer Registered Vehicles <i
                                                         class='text-danger'>*</i></label>
                                                 <select class="form-control shadow-sm bg-white cpt" id="customer_vehicle"
@@ -700,7 +698,7 @@
                                                     <option value="Changan M9">Changan M9</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-4">
                                                 <label class="form-label ">Complain Type: CPT <i
                                                         class='text-danger'>*</i></label>
                                                 <select class="form-control shadow-sm  bg-white cpt" id=""
@@ -712,17 +710,17 @@
                                                     @endforeach
                                                 </select>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-4">
                                                 <label class="form-label ">Complain Type: SPG </label>
                                                 <select class="form-control shadow-sm  bg-white" id=""
                                                     name="complain_spg_type" onchange="Getspg(this.value)"></select>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-4">
                                                 <label class="form-label ">Complain Type: CCC </label>
                                                 <select class="form-control shadow-sm bg-white" id=""
                                                     name="complain_ccc_type"></select>
                                             </div>
-                                            <div class="col-md-4 ">
+                                            <div class="col-4 ">
                                                 <label for="dealership" class="form-label">Complain Dealership <i
                                                         class='text-danger'>*</i></label>
                                                 <select class="form-control bg-white complaindealership"
@@ -730,58 +728,58 @@
                                                     onchange="getDealerships()">
                                                 </select>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-4">
                                                 <label class="form-label">PBO</label>
                                                 <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
                                                     name="pbo" placeholder="PBO">
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-4">
                                                 <label class="form-label">Chasis Number</label>
                                                 <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
                                                     name="chasis_number" placeholder="Chasis Number">
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-4">
                                                 <label class="form-label">Engine Number</label>
                                                 <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
                                                     name="engine_number" placeholder="Engine Number">
                                             </div>
-                                            <div class="col-md-4 ">
+                                            <div class="col-4 ">
                                                 <label class="form-label">Registration Number</label>
                                                 <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
                                                     name="registration_number" placeholder="Registration Number">
                                             </div>
-                                            <div class="col-md-4 ">
+                                            <div class="col-4 ">
                                                 <label class="form-label">Invoice Number</label>
                                                 <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
                                                     name="invoice_number" placeholder="Invoice Number">
                                             </div>
-                                            <div class="col-md-4 ">
+                                            <div class="col-4 ">
                                                 <label class="form-label">Invoice Date</label>
                                                 <input type="date" class="form-control shadow-sm p-3 mb-3 bg-white"
                                                     name="invoice_date" placeholder="Invoice Date">
                                             </div>
-                                            <div class="col-md-4 ">
+                                            <div class="col-4 ">
                                                 <label class="form-label">Sales order number</label>
                                                 <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
                                                     name="sale_order_number" placeholder="Sales order number">
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-4">
                                                 <label class="form-label">Mileage</label>
                                                 <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
                                                     name="milage" placeholder="Mileage">
                                             </div>
-                                            <div class="col-md-4" id="">
+                                            <div class="col-4" id="">
                                                 <label for="reason" class="form-label">Write VOC <i
                                                         class='text-danger'>*</i></label>
                                                 <textarea class="form-control shadow-sm bg-white rounded" id="complain_voc" name="complain_voc"
                                                     placeholder="Customer Complain"></textarea>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-4">
                                                 <label for="existing_vehicle" class="form-label">Agent Notes</label>
                                                 <input type="text" class="form-control shadow-sm p-3 mb-3 bg-white"
                                                     name="agent_complain_notes" placeholder="Agent Notes">
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-4">
                                                 <label for="complaint_priority" class="form-label mt-2">Complaint Priority
                                                     <i class='text-danger'>*</i></label> <br>
                                                 <label class="radio-inline" for="complaint_priority"> </label>
@@ -797,7 +795,7 @@
                                                     class="ml-4 shadow-sm bg-white" value="Low">
                                                 <span>Low</span>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-4">
                                                 <label class="form-label mt-2">Upload Document</label>
                                                 <input type="file" class="bg-white rounded" id="upload_docs"
                                                     name="upload_docs">
@@ -805,7 +803,7 @@
                                         </div>
 
                                         <div class="row mt-2">
-                                            <div class="col-md-12">
+                                            <div class="col-12">
                                                 <input type="submit" value="Submit" id="submitBtn"
                                                     class="btn btn-round btn-primary" style="float: right">
                                             </div>
@@ -839,12 +837,13 @@
     <script>
         $(document).ready(function() {
             $('.complaint-div').hide(); // Hide all divs initially
-
             // Click event handler for buttons
             $('[data-toggle="collapse"]').click(function() {
                 var target = $(this).data('target'); // Get the target div id
                 $('.complaint-div').not(target).hide(); // Hide all divs except the target
                 $(target).toggle(); // Toggle the visibility of the target div
+                $('[data-toggle="collapse"]').removeClass('bg-success');
+                $(this).addClass('bg-success');
             });
         });
     </script>

@@ -1,35 +1,8 @@
 @extends('template')
-@section('title', 'Complaints Ticket')
+@section('title', 'New Ticket')
 @section('content')
-    <style>
-        .card {
-            --bs-card-border-width: 5px !important;
-        }
+    <link rel="stylesheet" href="{{ asset('assets/css/create-complaints.css') }}">
 
-        .card-body {
-            padding: 0 15px 5px 15px !important;
-        }
-
-        #submitBtn {
-            display: none;
-        }
-
-        .form-control {
-            font-size: 12px;
-        }
-
-        .complaintBtn {
-            font-size: 10px !important;
-        }
-
-        .btn-primary:not(:disabled):not(.disabled):active,
-        .show>.btn-primary.dropdown-toggle {
-            color: #fff !important;
-            background-color: #000204 !important;
-            border-color: #005cbf !important;
-            font-style: italic !important;
-        }
-    </style>
     <!-- main-content START -->
     <div class="main-content m-2 p-2 rounded">
         <!-- section START -->
@@ -50,8 +23,7 @@
                                 </div>
                             @endif
                             @if (session('error-msg'))
-                                <div  class="alert alert-warning alert-dismissible fade show"
-                                    role="alert">
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                     <strong>{{ session('error-msg') }}</strong>
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -69,6 +41,7 @@
                                 <div class="card-header">
                                     <i class="fa fa-arrow-circle-left text text-danger" onclick="goback()"
                                         style="cursor: pointer; font-size: 20px"></i>
+                                    &nbsp;
                                     <strong class="card-title">&nbsp;Customer Complaint Form</strong>
                                 </div>
                                 <!-- card-body STARTS -->
@@ -122,13 +95,11 @@
                                                         class="asterisk text-danger">*</span></label>
                                                 <select name="customer_type" class="form-control shadow-sm"
                                                     id="customer_type" required>
-                                                    <option value="">Select Customer Type</option>
-                                                    <option value="GOVERMENT">GOVERMENT</option>
-                                                    <option value="INDIVIDUAL">INDIVIDUAL</option>
-                                                    <option value="CORPORATE">CORPORATE</option>
-                                                    <option value="INDIVIDUAL LEASING">INDIVIDUAL LEASING</option>
-                                                    <option value="INDIVIDUAL FINANCING">INDIVIDUAL FINANCING</option>
-                                                    <option value="CORPORATE LEASING">CORPORATE LEASING</option>
+                                                    @foreach ($customer_type as $cust_type)
+                                                        <option value="{{ $cust_type->type }}">
+                                                            {{ $cust_type->type }}
+                                                        </option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -137,11 +108,10 @@
                                             <div class="col-4"></div>
                                             <div class="col-4">
                                                 <button type="button" style="float: right;"
-                                                    class="btn btn-round btn-primary complaintBtn"
-                                                    id="aftersalecomplainBtn" data-type="After Sale"
-                                                    onclick="getcomplaincpt(this);" data-toggle="collapse"
-                                                    data-target="#aftersaleComplain"><i class="fa fa-comments"
-                                                        aria-hidden="true"></i>&nbsp;After
+                                                    class="btn btn-round btn-primary complaintBtn" id="aftersalecomplainBtn"
+                                                    data-type="After Sale" onclick="getcomplaincpt(this);"
+                                                    data-toggle="collapse" data-target="#aftersaleComplain"><i
+                                                        class="fa fa-comments" aria-hidden="true"></i>&nbsp;After
                                                     Sale</button>
                                                 <button type="button" style="float: right;"
                                                     class="btn btn-round btn-primary complaintBtn mr-1"

@@ -11,7 +11,8 @@
     <div class="csi_main_div">
         <div class="fixme col-md-12">
             <div class="csi_table_main_div">
-                <div style="display: flex; flex-direction: row; gap: 15px;">
+                {{-- <div style="display: flex; flex-direction: row; gap: 15px;"> --}}
+                <div style="gap: 15px;">
                     <div class="col-md-4">
                         <label for=""> Dealership : </label>
                         <select class="form-control bg-white" name="" id="" style="font-size: 12px;">

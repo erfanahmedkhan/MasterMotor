@@ -476,7 +476,7 @@
                                                             <div class="item_right">
                                                                 <div class="status">02-18-2023 08:04 PM</div>
                                                             </div>
-                                                        </div>
+                                                        </div>  
                                                     </li>
                                                 </ul>
                                             </div>

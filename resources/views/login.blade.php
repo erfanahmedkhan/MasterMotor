@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
     <!--Bootsrap 4 CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -65,11 +65,11 @@
                         </div>
                     </form>
                     {{-- <div class="footer text-center">
-                            <p class="text-white m-1" style="font-weight: bold">Don't have an user account?
-                                <a href="{{ url('crm-user-signup') }}" class="text-white link">
-                                    <span class="text-primary link">Create</span></a>
-                            </p>
-                        </div> --}}
+                        <p class="text-white m-1" style="font-weight: bold">Don't have an user account?
+                            <a href="{{ url('crm-user-signup') }}" class="text-white link">
+                                <span class="text-primary link">Create</span></a>
+                        </p>
+                    </div> --}}
                 </div>
             </div>
         </div>

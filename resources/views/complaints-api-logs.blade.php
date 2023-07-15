@@ -72,7 +72,7 @@
                                     <i class="fa fa-arrow-circle-left text text-danger" onclick="goback()"
                                         style="cursor: pointer; font-size: 20px"></i>
                                     <strong class="card-title">Complaints API Logs</strong>
-                                    <a href="{{ url('complaint-management') }}" class="btn btn-round btn-primary"
+                                    <a href="{{ url('complaints-management') }}" class="btn btn-round btn-primary"
                                         style="float: right" target="_blank">Complaints</a>
                                 </div>
                                 <!-- card-body STARTS -->

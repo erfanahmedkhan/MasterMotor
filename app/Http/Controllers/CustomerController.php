@@ -177,7 +177,7 @@ class CustomerController extends Controller
 
             $update_send_to_dms = DB::update("UPDATE `tbl_customers_inquiries` set `send_to_dms` = 1 WHERE `id` = '$id' ");
 
-           dd("yes");
+            dd("yes");
         }
         $response = curl_exec($curl);
         // dd($curl);
@@ -325,7 +325,7 @@ class CustomerController extends Controller
         $ticket = $sql[0]->complainno;
         $createdby = $sql[0]->createdby;
         $date = date("Y-m-d h:i:s");
-        $complain_typeype = "AFS";
+        $complain_type = "AFS";
         // dd($date);
 
         // CURL
@@ -759,7 +759,7 @@ class CustomerController extends Controller
             $today = $currentdate;
             $aging = $complaindate->diff($today)->days;
             //echo $aging;
-            if ($row->status == "Closed" && $row->status == "Force closed") {
+            if ($row->status == "Closed" || $row->status == "Force closed") {
                 if (empty($row->aging)) {
                     DB::update("UPDATE `tbl_customers_complains` set aging = '$aging' WHERE `id` = '$id' ");
                 }
@@ -783,7 +783,7 @@ class CustomerController extends Controller
                     ";
                 DB::insert($sql);
             }
-            if ($currentdate >= $after3days && ($row->status != "Pending" && $row->status != "Force Closed" && $row->status != "Request to force close")) {
+            if ($currentdate >= $after3days && ($row->status != "Pending" && $row->status != "Force closed" && $row->status != "Request to force close" && $row->status != "Closed")) {
                 $status_update = DB::update("UPDATE `tbl_customers_complains` set status = 'Pending' WHERE `id` = '$id' ");
             }
             if ($status_update) {
@@ -1054,6 +1054,7 @@ class CustomerController extends Controller
 
     public function create_customer_inquiry($id)
     {
+        $customer_type = DB::select("SELECT * FROM `customer_types`");
         $source = DB::select("select * from inq_complaints_sources");
         $vehicles = DB::select("select * from tbl_interested_vehicles");
         $status_reason = DB::select("select * from inquiry_status_reason");
@@ -1064,7 +1065,7 @@ class CustomerController extends Controller
             $complain_spg = DB::select("select * from tbl_complain_spg");
             $complain_ccc = DB::select("select * from tbl_complain_ccc");
             $colors = DB::select("select * from tbl_car_colors");
-            return view('create-customer-inquiry', ['city' => $city, 'dealers' => $dealer, 'complain_cpt' => $complain_cpt, 'complain_spg' => $complain_spg, 'complain_ccc' => $complain_ccc, 'colors' => $colors, 'vehicles' => $vehicles, 'status_reason' => $status_reason, 'source' => $source]);
+            return view('create-customer-inquiry', ['city' => $city, 'customer_type' => $customer_type, 'dealers' => $dealer, 'complain_cpt' => $complain_cpt, 'complain_spg' => $complain_spg, 'complain_ccc' => $complain_ccc, 'colors' => $colors, 'vehicles' => $vehicles, 'status_reason' => $status_reason, 'source' => $source]);
         } else if ($id == 'whatsapp') {
             $city = DB::select("select * from tbl_city");
             $dealer = DB::select("select * from tbl_dealers");
@@ -1073,7 +1074,7 @@ class CustomerController extends Controller
             $complain_spg = DB::select("select * from tbl_complain_spg");
             $complain_ccc = DB::select("select * from tbl_complain_ccc");
             $colors = DB::select("select * from tbl_car_colors");
-            return view('create-customer-inquiry', ['city' => $city, 'dealers' => $dealer, 'complain_cpt' => $complain_cpt, 'complain_spg' => $complain_spg, 'complain_ccc' => $complain_ccc, 'customer' => $customers, 'colors' => $colors]);
+            return view('create-customer-inquiry', ['city' => $city, 'customer_type' => $customer_type, 'dealers' => $dealer, 'complain_cpt' => $complain_cpt, 'complain_spg' => $complain_spg, 'complain_ccc' => $complain_ccc, 'customer' => $customers, 'colors' => $colors]);
         } else {
             $city = DB::select("select * from tbl_city");
             $dealer = DB::select("select * from tbl_dealers");
@@ -1082,10 +1083,54 @@ class CustomerController extends Controller
             $complain_spg = DB::select("select * from tbl_complain_spg");
             $complain_ccc = DB::select("select * from tbl_complain_ccc");
             $colors = DB::select("select * from tbl_car_colors");
-            return view('create-customer-inquiry', ['city' => $city, 'dealers' => $dealer, 'complain_cpt' => $complain_cpt, 'complain_spg' => $complain_spg, 'complain_ccc' => $complain_ccc, 'customer' => $customers, 'colors' => $colors]);
+            return view('create-customer-inquiry', ['city' => $city, 'customer_type' => $customer_type, 'dealers' => $dealer, 'complain_cpt' => $complain_cpt, 'complain_spg' => $complain_spg, 'complain_ccc' => $complain_ccc, 'customer' => $customers, 'colors' => $colors]);
         }
     }
 
+    function sendComplaintEmail($cust_email, $complaint_number)
+    {
+        // customer_email
+        $customer_email = $cust_email;
+        $recipients = [
+            $customer_email
+        ];
+        // cc
+        $ccRecipients = [];
+        $ccRecipientsData = DB::table('mail_recipients')
+            ->where('category', 'cc')
+            ->where('status', 1)
+            ->pluck('recipients');
+        foreach ($ccRecipientsData as $recipient) {
+            $ccRecipients[] = $recipient;
+        }
+        // bcc
+        $bccRecipients = [];
+        $bccRecipientsData = DB::table('mail_recipients')
+            ->where('category', 'bcc')
+            ->where('status', 1)
+            ->pluck('recipients');
+        foreach ($bccRecipientsData as $recipient) {
+            $bccRecipients[] = $recipient;
+        }
+        $message = DB::table('mail_body')
+            ->where('text_status', 1)
+            ->where('mail_category', 'complaint')
+            ->value('mail_text');
+        $data = [
+            'Message' => $message . " " . $complaint_number
+        ];
+        $mail = new TestEmail($data);
+        $sending_Mail = Mail::to($recipients)
+            ->cc($ccRecipients)
+            ->bcc($bccRecipients)
+            ->send($mail);
+        // Mail::to($recipients)->send(new TestEmail($data));
+        if ($sending_Mail) {
+            return true;
+        }
+    }
+
+    // create-customer-inquiry/add
     // public/create-customer-inquiry/add
     public function add_customer_inquiry(Request $req)
     {
@@ -1205,15 +1250,45 @@ class CustomerController extends Controller
 
             // Complaint Type - General
             if ($complaint_type_gen == 'General' && $gen_complain_voc != '') {
+                $city_id = $city;
                 // generating complaint number
                 $last_two_digits = substr($gen_complain_dealership, -2);
                 $complaint_number = $gen_complain_cpt_type . $gen_complain_spg_type . $last_two_digits . $complain_number;
-                $create_gen_complaint = DB::insert("
-                            INSERT INTO `tbl_customers_complains`
-                            (`id`, `created_at`, `createddate`, `createdtime`, `customer_id`, `created_by`, `source`, `complain_number`, `complain_type_cpt`, `complain_type_spg`, `complain_type_ccc`, `voc`, `dealership`, `complaint_priority`, `notes`, `status`, `complaint_type`)
-                            VALUES
-                            (null,'$date', '$currentDate','$currentTime', '$customer_id','$created_by', '$gen_complain_source', '$complaint_number', $gen_complain_cpt_type, '$gen_complain_spg_type', '$gen_complain_ccc_type', '$gen_complain_voc','$gen_complain_dealership','$gen_complaint_priority','$gen_agent_complain_notes', 'Open', '$complaint_type_gen')
-                        ");
+
+
+                $gen_complaint_data = array(
+                    'id' => NULL,
+                    'created_at' => $date,
+                    'createddate' => $currentDate,
+                    'createdtime' => $currentTime,
+                    'customer_id' => $customer_id,
+                    'city_id' => $city_id,
+                    'created_by' => $created_by,
+                    'source' => $req->input('gen_complain_source'),
+                    'complain_number' => $complaint_number,
+                    'complain_type_cpt' => $gen_complain_cpt_type,
+                    'complain_type_spg' => $gen_complain_spg_type,
+                    'complain_type_ccc' => $gen_complain_ccc_type,
+                    'voc' => $gen_complain_voc,
+                    'dealership' => $gen_complain_dealership,
+                    'complaint_priority' => $gen_complaint_priority,
+                    'notes' => $gen_agent_complain_notes,
+                    'complaint_type'  => $complaint_type_gen,
+                    'status' => 'Open'
+                );
+
+                $create_gen_complaint = DB::table('tbl_customers_complains')->insert($gen_complaint_data);
+                // $last_id = DB::table('tbl_customers_complains')->insertGetId($gen_complaint_data);
+
+
+
+                if ($create_gen_complaint) {
+                    $last_ticket = DB::select("SELECT tbl_customers_complains.id, `customer_id`, `complain_number`,
+                customers.email AS email, customers.name AS customer_name FROM `tbl_customers_complains` LEFT JOIN customers ON customers.id = tbl_customers_complains.`customer_id` ORDER BY id DESC LIMIT 1");
+                    // $cust_name = $last_ticket[0]->customer_name;
+                    $cust_email = $last_ticket[0]->email;
+                    $complaint_number = $last_ticket[0]->complain_number;
+                }
                 //  SENDING SMS /  SMS API
                 if ($create_gen_complaint) {
                     $message = DB::table('tbl_sms')
@@ -1231,48 +1306,14 @@ class CustomerController extends Controller
                     $url  = $sms_url . $x . "&Message=" . $msg;
                     $response = Http::post($url);
                 }
+                // MAINTAINING COMPLAINT'S STATUS LOG   ----- INSERT INTO `complain-status-log`
                 if ($create_gen_complaint) {
                     $sql = "INSERT INTO `complain-status-log`(`complain_number`, `current_status`, `created_by`, `created_at`, `created_date`, `created_time`) VALUES ('$complaint_number','Open', '$created_by', '$date', '$currentDate','$currentTime')";
                     DB::insert($sql);
                 }
-                if ($create_gen_complaint) {
-                    // SENDING MAIL STARTS
-                    $customer_email = $email;
-                    $recipients = [
-                        $customer_email
-                    ];
-                    // cc
-                    $ccRecipients = [];
-                    $ccRecipientsData = DB::table('mail_recipients')
-                        ->where('category', 'cc')
-                        ->where('status', 1)
-                        ->pluck('recipients');
-                    foreach ($ccRecipientsData as $recipient) {
-                        $ccRecipients[] = $recipient;
-                    }
-                    // bcc
-                    $bccRecipients = [];
-                    $bccRecipientsData = DB::table('mail_recipients')
-                        ->where('category', 'bcc')
-                        ->where('status', 1)
-                        ->pluck('recipients');
-                    foreach ($bccRecipientsData as $recipient) {
-                        $bccRecipients[] = $recipient;
-                    }
-                    $message = DB::table('mail_body')
-                        ->where('text_status', 1)
-                        ->where('mail_category', 'complaint')
-                        ->value('mail_text');
-                    $data = [
-                        'Message' => $message . " " . $complaint_number
-                    ];
-                    $mail = new TestEmail($data);
-                    Mail::to($recipients)
-                        ->cc($ccRecipients)
-                        ->bcc($bccRecipients)
-                        ->send($mail);
-                    // Mail::to($recipients)->send(new TestEmail($data));
-                    // SENDING MAIL ENDS
+                // CALLING MAIL (sendComplaintEmail) FUNCTION
+                $mailfuncation = $this->sendComplaintEmail($cust_email, $complaint_number);
+                if ($mailfuncation === true) {
                     return redirect('complaint-management')->with('msg', "$existing_customer_name's complaint registered with ticket # $complaint_number");
                 }
             }

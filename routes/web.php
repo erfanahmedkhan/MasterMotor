@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ComplaintsController;
 use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\EmailController;
@@ -134,7 +135,6 @@ Route::post('add-complain-follow-ups', [CustomerController::class, 'add_complain
 Route::post('add-customer-inquiry', [CustomerController::class, 'add_customer_inquiry']);
 Route::post('add-customers-inquiry', [CustomerController::class, 'add_customers_inquiry']);
 Route::post('add-customers-new-inquiry', [CustomerController::class, 'add_customers_new_inquiry']);
-// Route::post('add-customer-complaint', [CustomerController::class, 'add_customer_complaint']); del
 Route::post('add-customer-complain', [CustomerController::class, 'add_customer_complain']);
 // marketing-campaign
 Route::get('marketing-campaign-sms', [CustomerController::class, 'marketing_campaign_sms']);
@@ -162,7 +162,7 @@ Route::get('inquiry-status-log/{inquiry_number}', [CustomerController::class, 'i
 //  SUBHAN - 05052023
 Route::get('community-management', [SocialController::class, 'community_management']);
 //  SUBHAN - 05052023
-Route::get('csi', [CustomerController::class, 'csi_management']);
+Route::get('csi', [CustomerController::class, 'csi']);
 Route::get('csi-management', [CustomerController::class, 'csi_management']);
 Route::get('ssi-management', [CustomerController::class, 'ssi_management']);
 Route::get('miscellaneous-management', [CustomerController::class, 'miscellaneous_management']);
@@ -170,3 +170,15 @@ Route::get('warranty-management', [CustomerController::class, 'warranty_manageme
 // Route::get('send-email', [EmailController::class, 'send_mail']);
 Route::get('send-email', [EmailController::class, 'send_mail']);
 Route::get('create-customers-new-inquiry/{id}', [CustomerController::class, 'create_customers_new_inquiry']);
+
+//  COMPLAINTS ROUTES
+Route::get('complaints-management', [ComplaintsController::class, 'complaints_list']);
+Route::get('create-customers-complaints/{id}', [ComplaintsController::class, 'create_customers_complaints']);
+Route::post('add-customer-complaint', [ComplaintsController::class, 'add_customer_complaint']);
+Route::get('complaint-details/{id}', [ComplaintsController::class, 'complaint_details']);
+// Route::post('update-complaint-status/{id}', [ComplaintsController::class, 'update_complaint_status']);
+//  COMPLAINTS ROUTES
+
+Route::fallback(function () {
+    return view('not-found');
+})->name('not-found');

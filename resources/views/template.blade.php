@@ -7,6 +7,7 @@
     {{-- <title>Document</title> --}}
     {{-- <link rel="shortcut icon" href="favicon.png"> --}}
     <title>@yield('title', 'CHANGAN - CRM')</title>
+    @stack('styles')
     <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 

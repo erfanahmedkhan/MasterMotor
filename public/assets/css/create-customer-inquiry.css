@@ -1,0 +1,27 @@
+.card {
+    --bs-card-border-width: 5px !important;
+}
+
+.card-body {
+    padding: 0 15px 5px 15px !important;
+}
+
+#submitBtn {
+    display: none;
+}
+
+.form-control {
+    font-size: 12px;
+}
+
+.complaintBtn {
+    font-size: 10px !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+    color: #fff !important;
+    background-color: #000204 !important;
+    border-color: #005cbf !important;
+    font-style: italic !important;
+}
